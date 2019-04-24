@@ -1,0 +1,764 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BC06E875B0B2697226BE92B /* Pods_OBakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F6025C832909440241CFBF /* Pods_OBakeUITests.framework */; };
+		16CA6114AFC61372EA9DDAFE /* Pods_OBakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F6F22767194E6D54039D02 /* Pods_OBakeTests.framework */; };
+		459A66B5226C385B00C70B70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66B4226C385B00C70B70 /* AppDelegate.swift */; };
+		459A66BA226C385B00C70B70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459A66B8226C385B00C70B70 /* Main.storyboard */; };
+		459A66BC226C385E00C70B70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459A66BB226C385E00C70B70 /* Assets.xcassets */; };
+		459A66BF226C385E00C70B70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459A66BD226C385E00C70B70 /* LaunchScreen.storyboard */; };
+		459A66CA226C385E00C70B70 /* OBakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66C9226C385E00C70B70 /* OBakeTests.swift */; };
+		459A66D5226C385E00C70B70 /* OBakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66D4226C385E00C70B70 /* OBakeUITests.swift */; };
+		459A66E3226C3B1700C70B70 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66E2226C3B1700C70B70 /* AppManager.swift */; };
+		459A66E5226C3DDC00C70B70 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66E4226C3DDC00C70B70 /* MainViewController.swift */; };
+		459A66E7226C442500C70B70 /* GlobalFuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66E6226C442500C70B70 /* GlobalFuc.swift */; };
+		459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */; };
+		459A66FC226C5E2500C70B70 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66FB226C5E2500C70B70 /* UIView.swift */; };
+		A40E34DD60104BD500B1E80F /* Pods_OBake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEFED639BAAE26BD848AC90 /* Pods_OBake.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		459A66C6226C385E00C70B70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 459A66A9226C385B00C70B70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 459A66B0226C385B00C70B70;
+			remoteInfo = OBake;
+		};
+		459A66D1226C385E00C70B70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 459A66A9226C385B00C70B70 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 459A66B0226C385B00C70B70;
+			remoteInfo = OBake;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		35F6025C832909440241CFBF /* Pods_OBakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OBakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4284616392F1F2CE493775DB /* Pods-OBakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBakeTests.debug.xcconfig"; path = "Target Support Files/Pods-OBakeTests/Pods-OBakeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		459A66B1226C385B00C70B70 /* OBake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		459A66B4226C385B00C70B70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		459A66B9226C385B00C70B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		459A66BB226C385E00C70B70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		459A66BE226C385E00C70B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		459A66C0226C385E00C70B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		459A66C5226C385E00C70B70 /* OBakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OBakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		459A66C9226C385E00C70B70 /* OBakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBakeTests.swift; sourceTree = "<group>"; };
+		459A66CB226C385E00C70B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		459A66D0226C385E00C70B70 /* OBakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OBakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		459A66D4226C385E00C70B70 /* OBakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBakeUITests.swift; sourceTree = "<group>"; };
+		459A66D6226C385E00C70B70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		459A66E2226C3B1700C70B70 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		459A66E4226C3DDC00C70B70 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		459A66E6226C442500C70B70 /* GlobalFuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuc.swift; sourceTree = "<group>"; };
+		459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
+		459A66FB226C5E2500C70B70 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		802B9AA92E046176CDD02935 /* Pods-OBake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBake.debug.xcconfig"; path = "Target Support Files/Pods-OBake/Pods-OBake.debug.xcconfig"; sourceTree = "<group>"; };
+		9CEFED639BAAE26BD848AC90 /* Pods_OBake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OBake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B6FB6D1638A2189583E0A1 /* Pods-OBakeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBakeTests.release.xcconfig"; path = "Target Support Files/Pods-OBakeTests/Pods-OBakeTests.release.xcconfig"; sourceTree = "<group>"; };
+		D290EAE8DABA387A37382229 /* Pods-OBake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBake.release.xcconfig"; path = "Target Support Files/Pods-OBake/Pods-OBake.release.xcconfig"; sourceTree = "<group>"; };
+		D405FC46398C161306098C23 /* Pods-OBakeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBakeUITests.release.xcconfig"; path = "Target Support Files/Pods-OBakeUITests/Pods-OBakeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D8F6F22767194E6D54039D02 /* Pods_OBakeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OBakeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F165E165DDFD4B6E9A8AC262 /* Pods-OBakeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBakeUITests.debug.xcconfig"; path = "Target Support Files/Pods-OBakeUITests/Pods-OBakeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		459A66AE226C385B00C70B70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A40E34DD60104BD500B1E80F /* Pods_OBake.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459A66C2226C385E00C70B70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16CA6114AFC61372EA9DDAFE /* Pods_OBakeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459A66CD226C385E00C70B70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC06E875B0B2697226BE92B /* Pods_OBakeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		459A66A8226C385B00C70B70 = {
+			isa = PBXGroup;
+			children = (
+				459A66B3226C385B00C70B70 /* OBake */,
+				459A66C8226C385E00C70B70 /* OBakeTests */,
+				459A66D3226C385E00C70B70 /* OBakeUITests */,
+				459A66B2226C385B00C70B70 /* Products */,
+				58DD7FC81581520D8BEEE53C /* Pods */,
+				9EA894C63B7430490F4FB562 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		459A66B2226C385B00C70B70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				459A66B1226C385B00C70B70 /* OBake.app */,
+				459A66C5226C385E00C70B70 /* OBakeTests.xctest */,
+				459A66D0226C385E00C70B70 /* OBakeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		459A66B3226C385B00C70B70 /* OBake */ = {
+			isa = PBXGroup;
+			children = (
+				459A66B4226C385B00C70B70 /* AppDelegate.swift */,
+				459A66E2226C3B1700C70B70 /* AppManager.swift */,
+				459A66E6226C442500C70B70 /* GlobalFuc.swift */,
+				459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */,
+				459A66E4226C3DDC00C70B70 /* MainViewController.swift */,
+				459A66FA226C5E0E00C70B70 /* OBTools */,
+				459A66B8226C385B00C70B70 /* Main.storyboard */,
+				459A66BB226C385E00C70B70 /* Assets.xcassets */,
+				459A66BD226C385E00C70B70 /* LaunchScreen.storyboard */,
+				459A66C0226C385E00C70B70 /* Info.plist */,
+			);
+			path = OBake;
+			sourceTree = "<group>";
+		};
+		459A66C8226C385E00C70B70 /* OBakeTests */ = {
+			isa = PBXGroup;
+			children = (
+				459A66C9226C385E00C70B70 /* OBakeTests.swift */,
+				459A66CB226C385E00C70B70 /* Info.plist */,
+			);
+			path = OBakeTests;
+			sourceTree = "<group>";
+		};
+		459A66D3226C385E00C70B70 /* OBakeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				459A66D4226C385E00C70B70 /* OBakeUITests.swift */,
+				459A66D6226C385E00C70B70 /* Info.plist */,
+			);
+			path = OBakeUITests;
+			sourceTree = "<group>";
+		};
+		459A66FA226C5E0E00C70B70 /* OBTools */ = {
+			isa = PBXGroup;
+			children = (
+				459A66FB226C5E2500C70B70 /* UIView.swift */,
+			);
+			path = OBTools;
+			sourceTree = "<group>";
+		};
+		58DD7FC81581520D8BEEE53C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				802B9AA92E046176CDD02935 /* Pods-OBake.debug.xcconfig */,
+				D290EAE8DABA387A37382229 /* Pods-OBake.release.xcconfig */,
+				4284616392F1F2CE493775DB /* Pods-OBakeTests.debug.xcconfig */,
+				B1B6FB6D1638A2189583E0A1 /* Pods-OBakeTests.release.xcconfig */,
+				F165E165DDFD4B6E9A8AC262 /* Pods-OBakeUITests.debug.xcconfig */,
+				D405FC46398C161306098C23 /* Pods-OBakeUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9EA894C63B7430490F4FB562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CEFED639BAAE26BD848AC90 /* Pods_OBake.framework */,
+				D8F6F22767194E6D54039D02 /* Pods_OBakeTests.framework */,
+				35F6025C832909440241CFBF /* Pods_OBakeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		459A66B0226C385B00C70B70 /* OBake */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459A66D9226C385E00C70B70 /* Build configuration list for PBXNativeTarget "OBake" */;
+			buildPhases = (
+				84798990E1EFED5158654FCC /* [CP] Check Pods Manifest.lock */,
+				459A66AD226C385B00C70B70 /* Sources */,
+				459A66AE226C385B00C70B70 /* Frameworks */,
+				459A66AF226C385B00C70B70 /* Resources */,
+				EC5D7EAE12F8C93D44686F42 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OBake;
+			productName = OBake;
+			productReference = 459A66B1226C385B00C70B70 /* OBake.app */;
+			productType = "com.apple.product-type.application";
+		};
+		459A66C4226C385E00C70B70 /* OBakeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459A66DC226C385E00C70B70 /* Build configuration list for PBXNativeTarget "OBakeTests" */;
+			buildPhases = (
+				55963DE8FD01C3B6DF04CD8C /* [CP] Check Pods Manifest.lock */,
+				459A66C1226C385E00C70B70 /* Sources */,
+				459A66C2226C385E00C70B70 /* Frameworks */,
+				459A66C3226C385E00C70B70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				459A66C7226C385E00C70B70 /* PBXTargetDependency */,
+			);
+			name = OBakeTests;
+			productName = OBakeTests;
+			productReference = 459A66C5226C385E00C70B70 /* OBakeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		459A66CF226C385E00C70B70 /* OBakeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 459A66DF226C385E00C70B70 /* Build configuration list for PBXNativeTarget "OBakeUITests" */;
+			buildPhases = (
+				5778176F0C2EC37FF43A15CF /* [CP] Check Pods Manifest.lock */,
+				459A66CC226C385E00C70B70 /* Sources */,
+				459A66CD226C385E00C70B70 /* Frameworks */,
+				459A66CE226C385E00C70B70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				459A66D2226C385E00C70B70 /* PBXTargetDependency */,
+			);
+			name = OBakeUITests;
+			productName = OBakeUITests;
+			productReference = 459A66D0226C385E00C70B70 /* OBakeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		459A66A9226C385B00C70B70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Otis;
+				TargetAttributes = {
+					459A66B0226C385B00C70B70 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					459A66C4226C385E00C70B70 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 459A66B0226C385B00C70B70;
+					};
+					459A66CF226C385E00C70B70 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 459A66B0226C385B00C70B70;
+					};
+				};
+			};
+			buildConfigurationList = 459A66AC226C385B00C70B70 /* Build configuration list for PBXProject "OBake" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 459A66A8226C385B00C70B70;
+			productRefGroup = 459A66B2226C385B00C70B70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				459A66B0226C385B00C70B70 /* OBake */,
+				459A66C4226C385E00C70B70 /* OBakeTests */,
+				459A66CF226C385E00C70B70 /* OBakeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		459A66AF226C385B00C70B70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459A66BF226C385E00C70B70 /* LaunchScreen.storyboard in Resources */,
+				459A66BC226C385E00C70B70 /* Assets.xcassets in Resources */,
+				459A66BA226C385B00C70B70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459A66C3226C385E00C70B70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459A66CE226C385E00C70B70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55963DE8FD01C3B6DF04CD8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OBakeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5778176F0C2EC37FF43A15CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OBakeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84798990E1EFED5158654FCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OBake-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC5D7EAE12F8C93D44686F42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OBake/Pods-OBake-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OBake/Pods-OBake-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		459A66AD226C385B00C70B70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459A66E5226C3DDC00C70B70 /* MainViewController.swift in Sources */,
+				459A66E7226C442500C70B70 /* GlobalFuc.swift in Sources */,
+				459A66FC226C5E2500C70B70 /* UIView.swift in Sources */,
+				459A66B5226C385B00C70B70 /* AppDelegate.swift in Sources */,
+				459A66E3226C3B1700C70B70 /* AppManager.swift in Sources */,
+				459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459A66C1226C385E00C70B70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459A66CA226C385E00C70B70 /* OBakeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		459A66CC226C385E00C70B70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459A66D5226C385E00C70B70 /* OBakeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		459A66C7226C385E00C70B70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 459A66B0226C385B00C70B70 /* OBake */;
+			targetProxy = 459A66C6226C385E00C70B70 /* PBXContainerItemProxy */;
+		};
+		459A66D2226C385E00C70B70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 459A66B0226C385B00C70B70 /* OBake */;
+			targetProxy = 459A66D1226C385E00C70B70 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		459A66B8226C385B00C70B70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				459A66B9226C385B00C70B70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		459A66BD226C385E00C70B70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				459A66BE226C385E00C70B70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		459A66D7226C385E00C70B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		459A66D8226C385E00C70B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		459A66DA226C385E00C70B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 802B9AA92E046176CDD02935 /* Pods-OBake.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK77JRQQ85;
+				INFOPLIST_FILE = OBake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otis.OBake;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		459A66DB226C385E00C70B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D290EAE8DABA387A37382229 /* Pods-OBake.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK77JRQQ85;
+				INFOPLIST_FILE = OBake/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otis.OBake;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		459A66DD226C385E00C70B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4284616392F1F2CE493775DB /* Pods-OBakeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK77JRQQ85;
+				INFOPLIST_FILE = OBakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otis.OBakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBake.app/OBake";
+			};
+			name = Debug;
+		};
+		459A66DE226C385E00C70B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1B6FB6D1638A2189583E0A1 /* Pods-OBakeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK77JRQQ85;
+				INFOPLIST_FILE = OBakeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otis.OBakeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OBake.app/OBake";
+			};
+			name = Release;
+		};
+		459A66E0226C385E00C70B70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F165E165DDFD4B6E9A8AC262 /* Pods-OBakeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK77JRQQ85;
+				INFOPLIST_FILE = OBakeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otis.OBakeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OBake;
+			};
+			name = Debug;
+		};
+		459A66E1226C385E00C70B70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D405FC46398C161306098C23 /* Pods-OBakeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HK77JRQQ85;
+				INFOPLIST_FILE = OBakeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otis.OBakeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OBake;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		459A66AC226C385B00C70B70 /* Build configuration list for PBXProject "OBake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459A66D7226C385E00C70B70 /* Debug */,
+				459A66D8226C385E00C70B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		459A66D9226C385E00C70B70 /* Build configuration list for PBXNativeTarget "OBake" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459A66DA226C385E00C70B70 /* Debug */,
+				459A66DB226C385E00C70B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		459A66DC226C385E00C70B70 /* Build configuration list for PBXNativeTarget "OBakeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459A66DD226C385E00C70B70 /* Debug */,
+				459A66DE226C385E00C70B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		459A66DF226C385E00C70B70 /* Build configuration list for PBXNativeTarget "OBakeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				459A66E0226C385E00C70B70 /* Debug */,
+				459A66E1226C385E00C70B70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 459A66A9226C385B00C70B70 /* Project object */;
+}
