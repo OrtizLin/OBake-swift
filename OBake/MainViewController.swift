@@ -11,7 +11,7 @@ import Foundation
 import FSPagerView
 import SafariServices
 
-class MainViewController: UIViewController,FSPagerViewDelegate,FSPagerViewDataSource {
+class MainViewController: UIViewController {
   
     @IBOutlet weak var newsView: FSPagerView!
     @IBOutlet weak var newsLabel: UILabel!
@@ -29,7 +29,7 @@ class MainViewController: UIViewController,FSPagerViewDelegate,FSPagerViewDataSo
     
 }
 
-extension MainViewController {
+extension MainViewController: FSPagerViewDelegate, FSPagerViewDataSource {
     
     func numberOfItems(in pagerView: FSPagerView) -> Int {
         return NewsManager.shared.getFakeDataArray().count

@@ -20,6 +20,7 @@
 		459A66E7226C442500C70B70 /* GlobalFuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66E6226C442500C70B70 /* GlobalFuc.swift */; };
 		459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */; };
 		459A66FC226C5E2500C70B70 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66FB226C5E2500C70B70 /* UIView.swift */; };
+		45CB04D622721968003DD563 /* OBCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB04D522721968003DD563 /* OBCalculatorModel.swift */; };
 		45F21E7122714BB400992BD4 /* OBNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F21E7022714BB400992BD4 /* OBNewsManager.swift */; };
 		45F21E7922718DD500992BD4 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F21E7822718DD500992BD4 /* TeacherViewController.swift */; };
 		45F21E7B2271939A00992BD4 /* OBTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F21E7A2271939A00992BD4 /* OBTabBarController.swift */; };
@@ -63,6 +64,7 @@
 		459A66E6226C442500C70B70 /* GlobalFuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuc.swift; sourceTree = "<group>"; };
 		459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		459A66FB226C5E2500C70B70 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		45CB04D522721968003DD563 /* OBCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBCalculatorModel.swift; sourceTree = "<group>"; };
 		45F21E7022714BB400992BD4 /* OBNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBNewsManager.swift; sourceTree = "<group>"; };
 		45F21E7822718DD500992BD4 /* TeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
 		45F21E7A2271939A00992BD4 /* OBTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBTabBarController.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				45F21E7022714BB400992BD4 /* OBNewsManager.swift */,
+				45CB04D522721968003DD563 /* OBCalculatorModel.swift */,
 				45F21E7A2271939A00992BD4 /* OBTabBarController.swift */,
 				459A66FB226C5E2500C70B70 /* UIView.swift */,
 			);
@@ -424,6 +427,7 @@
 			files = (
 				459A66E5226C3DDC00C70B70 /* MainViewController.swift in Sources */,
 				45F21E7922718DD500992BD4 /* TeacherViewController.swift in Sources */,
+				45CB04D622721968003DD563 /* OBCalculatorModel.swift in Sources */,
 				459A66E7226C442500C70B70 /* GlobalFuc.swift in Sources */,
 				459A66FC226C5E2500C70B70 /* UIView.swift in Sources */,
 				459A66B5226C385B00C70B70 /* AppDelegate.swift in Sources */,
