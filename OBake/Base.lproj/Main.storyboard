@@ -18,17 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-NM-7uc">
-                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="老師介紹" image="contact" id="z12-OS-IEx"/>
-                                    <tabBarItem title="我的最愛" image="favorite" id="ibH-cP-SfI"/>
-                                    <tabBarItem title="計算機" image="calculator" id="T4c-8j-sPd"/>
-                                    <tabBarItem title="預約課程" image="clock" id="LIa-Hw-LiD"/>
-                                    <tabBarItem title="更多資訊" image="more" id="Ech-mv-ruc"/>
-                                </items>
-                            </tabBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfm-O1-9Jd" customClass="FSPagerView" customModule="FSPagerView">
                                 <rect key="frame" x="16" y="32" width="288" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -37,9 +26,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bfm-O1-9Jd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="S06-Cw-hmr"/>
-                            <constraint firstItem="bPa-NM-7uc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dpw-Xl-UBG"/>
-                            <constraint firstItem="bPa-NM-7uc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="jOd-ow-Are"/>
-                            <constraint firstItem="bPa-NM-7uc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vYj-6S-4qz"/>
                             <constraint firstItem="bfm-O1-9Jd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-188" id="vaE-KM-xbU"/>
                             <constraint firstItem="bfm-O1-9Jd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vel-wj-Rgm"/>
                             <constraint firstItem="bfm-O1-9Jd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y5j-Mf-BrJ"/>
@@ -55,11 +41,4 @@
             <point key="canvasLocation" x="129.375" y="129.92957746478874"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="calculator" width="32" height="32"/>
-        <image name="clock" width="32" height="32"/>
-        <image name="contact" width="32" height="32"/>
-        <image name="favorite" width="32" height="32"/>
-        <image name="more" width="32" height="32"/>
-    </resources>
 </document>

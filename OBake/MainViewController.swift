@@ -14,6 +14,7 @@ import SafariServices
 class MainViewController: UIViewController,FSPagerViewDelegate,FSPagerViewDataSource {
   
     @IBOutlet weak var newsView: FSPagerView!
+    @IBOutlet weak var newsLabel: UILabel!
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -25,21 +26,27 @@ class MainViewController: UIViewController,FSPagerViewDelegate,FSPagerViewDataSo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
+}
 
+extension MainViewController {
+    
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return NewsManager.shared.getFakeUrlArray().count
+        return NewsManager.shared.getFakeDataArray().count
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.loadImageUsingCacheWithUrlString(urlString: NewsManager.shared.getFakeUrlArray()[index].imageUrl!)
+        cell.imageView?.loadImageUsingCacheWithUrlString(urlString: NewsManager.shared.getFakeDataArray()[index].imageUrl!)
         cell.imageView?.contentMode = .scaleAspectFit
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleNewsGesture(_:)))
         cell.imageView?.isUserInteractionEnabled = true
         cell.imageView?.addGestureRecognizer(tap)
         cell.imageView?.tag = index
-
+        cell.selectedBackgroundView?.backgroundColor = .white
+        cell.textLabel?.text = NewsManager.shared.getFakeDataArray()[index].title
+        
         return cell
     }
     
@@ -47,17 +54,10 @@ class MainViewController: UIViewController,FSPagerViewDelegate,FSPagerViewDataSo
         let view = gesture.view
         let tag = view?.tag
         
-        let safariViewController = SFSafariViewController(url:NSURL(string:  NewsManager.shared.getFakeUrlArray()[tag ?? 0].url ?? "https://www.yahoo.com.tw")! as URL)
-        safariViewController.delegate = self
+        let safariViewController = SFSafariViewController(url:NSURL(string:  NewsManager.shared.getFakeDataArray()[tag ?? 0].url ?? "https://www.yahoo.com.tw")! as URL)
         self.present(safariViewController, animated: true, completion: nil)
-        
     }
-}
-
-extension MainViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        controller.dismiss(animated: true, completion: nil)
-    }
+    
 }
 
 

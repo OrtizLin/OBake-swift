@@ -23,7 +23,7 @@ class News {
 
 protocol NewsManageable {
     func initView(view: FSPagerView)
-    func getFakeUrlArray() -> [News]
+    func getFakeDataArray() -> [News]
 }
 
 class NewsManager: NewsManageable {
@@ -38,7 +38,7 @@ class NewsManager: NewsManageable {
         view.transformer = FSPagerViewTransformer(type: FSPagerViewTransformerType.overlap)
     }
     
-    func getFakeUrlArray() -> [News] {
+    func getFakeDataArray() -> [News] {
         let dataOne = News(title: "First News", imageUrl: "https://api.twdd.com.tw/upload/rotateimage/WMEaQTzPqrFmYSTJZ5YS1nLBZiC9xE64N87MtbeQ.png", url: "http://bit.ly/2EnmmsL")
         let dataSecond = News(title: "Second News", imageUrl: "https://api.twdd.com.tw/upload/rotateimage/o5aqsXgmcu1lY6Pk8Ie8bAYTLaL596L0vgTz87xi.png", url: "http://bit.ly/2NmMg3K")
         let dataThird = News(title: "Third News", imageUrl: "https://api.twdd.com.tw/upload/rotateimage/1gkeDt9ei4azXQR4nfmkxmgIyrkCQ64H3mtStjvU.jpeg", url: "https://news.twdd.tw/news/discount/229-20181107")
