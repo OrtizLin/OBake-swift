@@ -20,6 +20,7 @@
 		459A66E7226C442500C70B70 /* GlobalFuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66E6226C442500C70B70 /* GlobalFuc.swift */; };
 		459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */; };
 		459A66FC226C5E2500C70B70 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66FB226C5E2500C70B70 /* UIView.swift */; };
+		45F21E7122714BB400992BD4 /* OBNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F21E7022714BB400992BD4 /* OBNewsManager.swift */; };
 		A40E34DD60104BD500B1E80F /* Pods_OBake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEFED639BAAE26BD848AC90 /* Pods_OBake.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		459A66E6226C442500C70B70 /* GlobalFuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuc.swift; sourceTree = "<group>"; };
 		459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		459A66FB226C5E2500C70B70 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		45F21E7022714BB400992BD4 /* OBNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBNewsManager.swift; sourceTree = "<group>"; };
 		802B9AA92E046176CDD02935 /* Pods-OBake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBake.debug.xcconfig"; path = "Target Support Files/Pods-OBake/Pods-OBake.debug.xcconfig"; sourceTree = "<group>"; };
 		9CEFED639BAAE26BD848AC90 /* Pods_OBake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OBake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B6FB6D1638A2189583E0A1 /* Pods-OBakeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBakeTests.release.xcconfig"; path = "Target Support Files/Pods-OBakeTests/Pods-OBakeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		459A66FA226C5E0E00C70B70 /* OBTools */ = {
 			isa = PBXGroup;
 			children = (
+				45F21E7022714BB400992BD4 /* OBNewsManager.swift */,
 				459A66FB226C5E2500C70B70 /* UIView.swift */,
 			);
 			path = OBTools;
@@ -418,6 +421,7 @@
 				459A66FC226C5E2500C70B70 /* UIView.swift in Sources */,
 				459A66B5226C385B00C70B70 /* AppDelegate.swift in Sources */,
 				459A66E3226C3B1700C70B70 /* AppManager.swift in Sources */,
+				45F21E7122714BB400992BD4 /* OBNewsManager.swift in Sources */,
 				459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
