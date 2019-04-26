@@ -8,25 +8,14 @@
 
 import Foundation
 import FSPagerView
-
-class News {
-    var title: String?
-    var imageUrl: String?
-    var url: String?
-    
-    init(title: String, imageUrl: String, url: String){
-        self.title = title
-        self.imageUrl = imageUrl
-        self.url = url
-    }
-}
+import UIKit
 
 protocol NewsManageable {
     func initView(view: FSPagerView)
     func getFakeDataArray() -> [News]
 }
 
-class NewsManager: NewsManageable {
+class NewsManager: UIViewController, NewsManageable  {
   
     static let shared = NewsManager()
     
@@ -36,6 +25,9 @@ class NewsManager: NewsManageable {
         view.interitemSpacing = 8.0
         view.isInfinite = true
         view.transformer = FSPagerViewTransformer(type: FSPagerViewTransformerType.overlap)
+        view.delegate = self
+        view.dataSource = self
+
     }
     
     func getFakeDataArray() -> [News] {
@@ -50,5 +42,40 @@ class NewsManager: NewsManageable {
     
         return dataArray
     }
+    
+}
+
+extension NewsManager: FSPagerViewDelegate, FSPagerViewDataSource {
+    
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return NewsManager.shared.getFakeDataArray().count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.loadImageUsingCacheWithUrlString(urlString: NewsManager.shared.getFakeDataArray()[index].imageUrl!)
+        cell.imageView?.contentMode = .scaleAspectFit
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleNewsGesture(_:)))
+        cell.imageView?.isUserInteractionEnabled = true
+        cell.imageView?.addGestureRecognizer(tap)
+        cell.imageView?.tag = index
+        cell.selectedBackgroundView?.backgroundColor = .white
+        cell.textLabel?.text = NewsManager.shared.getFakeDataArray()[index].title
+        
+        return cell
+    }
+    
+    @objc func handleNewsGesture(_ gesture : UITapGestureRecognizer) {
+        //        let view = gesture.view
+        //        let tag = view?.tag
+        //
+        //        let safariViewController = SFSafariViewController(url:NSURL(string:  NewsManager.shared.getFakeDataArray()[tag ?? 0].url ?? "https://www.yahoo.com.tw")! as URL)
+        //        self.present(safariViewController, animated: true, completion: nil)
+        
+        let calculateVC = instantiate(storyboard: .main, viewController: .calculate)
+        UIApplication.topViewController()?.view.window?.rootViewController?.present(calculateVC, animated: true, completion: nil)
+    }
+    
     
 }
