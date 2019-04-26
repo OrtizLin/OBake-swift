@@ -18,7 +18,7 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var poundTextField: UITextField!
     @IBOutlet weak var ozTextField: UITextField!
     
-    var selectType:(WeightType) = .kg
+    var selectType:(WeightType) = .g
     var weightResult:(Weight)?
     var nowValue:(String) = "empty"
     
