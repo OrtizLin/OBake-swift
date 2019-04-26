@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0BC06E875B0B2697226BE92B /* Pods_OBakeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F6025C832909440241CFBF /* Pods_OBakeUITests.framework */; };
 		16CA6114AFC61372EA9DDAFE /* Pods_OBakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F6F22767194E6D54039D02 /* Pods_OBakeTests.framework */; };
+		459224342272A0AC0068DE5B /* OBCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459224332272A0AC0068DE5B /* OBCalculatorModel.swift */; };
 		459A66B5226C385B00C70B70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66B4226C385B00C70B70 /* AppDelegate.swift */; };
 		459A66BA226C385B00C70B70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 459A66B8226C385B00C70B70 /* Main.storyboard */; };
 		459A66BC226C385E00C70B70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459A66BB226C385E00C70B70 /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		459A66E7226C442500C70B70 /* GlobalFuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66E6226C442500C70B70 /* GlobalFuc.swift */; };
 		459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */; };
 		459A66FC226C5E2500C70B70 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459A66FB226C5E2500C70B70 /* UIView.swift */; };
-		45CB04D622721968003DD563 /* OBCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB04D522721968003DD563 /* OBCalculatorModel.swift */; };
 		45F21E7122714BB400992BD4 /* OBNewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F21E7022714BB400992BD4 /* OBNewsManager.swift */; };
 		45F21E7922718DD500992BD4 /* TeacherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F21E7822718DD500992BD4 /* TeacherViewController.swift */; };
 		A40E34DD60104BD500B1E80F /* Pods_OBake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CEFED639BAAE26BD848AC90 /* Pods_OBake.framework */; };
@@ -46,6 +46,7 @@
 /* Begin PBXFileReference section */
 		35F6025C832909440241CFBF /* Pods_OBakeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OBakeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4284616392F1F2CE493775DB /* Pods-OBakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBakeTests.debug.xcconfig"; path = "Target Support Files/Pods-OBakeTests/Pods-OBakeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		459224332272A0AC0068DE5B /* OBCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBCalculatorModel.swift; sourceTree = "<group>"; };
 		459A66B1226C385B00C70B70 /* OBake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OBake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		459A66B4226C385B00C70B70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		459A66B9226C385B00C70B70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		459A66E6226C442500C70B70 /* GlobalFuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuc.swift; sourceTree = "<group>"; };
 		459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		459A66FB226C5E2500C70B70 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		45CB04D522721968003DD563 /* OBCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBCalculatorModel.swift; sourceTree = "<group>"; };
 		45F21E7022714BB400992BD4 /* OBNewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBNewsManager.swift; sourceTree = "<group>"; };
 		45F21E7822718DD500992BD4 /* TeacherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherViewController.swift; sourceTree = "<group>"; };
 		802B9AA92E046176CDD02935 /* Pods-OBake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBake.debug.xcconfig"; path = "Target Support Files/Pods-OBake/Pods-OBake.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,11 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				45F21E7022714BB400992BD4 /* OBNewsManager.swift */,
-<<<<<<< HEAD
-=======
-				45CB04D522721968003DD563 /* OBCalculatorModel.swift */,
-				45F21E7A2271939A00992BD4 /* OBTabBarController.swift */,
->>>>>>> a3258bdf0a3a215cf4f300dbf8c4707a8c39c198
+				459224332272A0AC0068DE5B /* OBCalculatorModel.swift */,
 				459A66FB226C5E2500C70B70 /* UIView.swift */,
 			);
 			path = OBTools;
@@ -428,11 +424,11 @@
 			files = (
 				459A66E5226C3DDC00C70B70 /* MainViewController.swift in Sources */,
 				45F21E7922718DD500992BD4 /* TeacherViewController.swift in Sources */,
-				45CB04D622721968003DD563 /* OBCalculatorModel.swift in Sources */,
 				459A66E7226C442500C70B70 /* GlobalFuc.swift in Sources */,
 				459A66FC226C5E2500C70B70 /* UIView.swift in Sources */,
 				459A66B5226C385B00C70B70 /* AppDelegate.swift in Sources */,
 				459A66E3226C3B1700C70B70 /* AppManager.swift in Sources */,
+				459224342272A0AC0068DE5B /* OBCalculatorModel.swift in Sources */,
 				45F21E7122714BB400992BD4 /* OBNewsManager.swift in Sources */,
 				459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */,
 			);
