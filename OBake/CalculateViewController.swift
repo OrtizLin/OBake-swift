@@ -104,23 +104,11 @@ extension CalculateViewController: UITextFieldDelegate {
     
     func showValueOnTextField(_ tag: Int){
 
-        if tag == 100{
-            if nowValue == "empty" || nowValue . contains(".") || nowValue.last == "."{
-                return
-            }
-            else{
-                nowValue += "."
-            }
-        }
-        else if tag != 999 {
-            if nowValue == "empty"{
-                nowValue = String(tag)
-            }
-            else{
-                nowValue += String(tag)
-            }
+        if tag == 100 && nowValue == "empty" || tag == 100 && nowValue . contains("."){
+           return
         }
         
+        nowValue = WeightConvert.shared.updateNowValue(tag, Value: nowValue)
         weightResult = WeightConvert.shared.weightConvertValue(type: selectType, value: Double(nowValue) ?? 0)
         
         kgTextField.text = "\(weightResult?.kg ?? 0)"

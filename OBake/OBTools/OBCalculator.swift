@@ -11,6 +11,7 @@ import Foundation
 protocol WeightConvertion {
     func weightConvertValue(type: WeightType , value: Double) -> Weight
     func sizeConvertValue(type: SizeType, value: Weight) -> Weight
+    func updateNowValue(_ tag: Int, Value: String) -> String
 }
 
 class WeightConvert: WeightConvertion {
@@ -62,4 +63,22 @@ class WeightConvert: WeightConvertion {
         return weight
     }
     
+    func updateNowValue(_ tag: Int, Value: String) -> String {
+        var nowValue = Value
+        
+        if tag == 100{
+                nowValue += "."
+        }
+        else if tag != 999 {
+            if nowValue == "empty"{
+                nowValue = String(tag)
+            }
+            else{
+                nowValue += String(tag)
+            }
+        }
+        return nowValue
+        
+    }
+
 }
