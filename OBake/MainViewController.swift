@@ -9,7 +9,6 @@
 import UIKit
 import Foundation
 import FSPagerView
-import SafariServices
 
 class MainViewController: UIViewController {
   
@@ -25,5 +24,10 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
+    @IBAction func temp_button(_ sender: Any) {
+        let calculateVC = instantiate(storyboard: .main, viewController: .calculate)
+        let nav = UINavigationController(rootViewController: calculateVC)
+        present(nav, animated: true, completion:  nil)
+    }
 }
 

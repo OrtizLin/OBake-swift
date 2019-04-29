@@ -9,6 +9,7 @@
 import Foundation
 import FSPagerView
 import UIKit
+import SafariServices
 
 protocol NewsManageable {
     func initView(view: FSPagerView)
@@ -67,14 +68,11 @@ extension NewsManager: FSPagerViewDelegate, FSPagerViewDataSource {
     }
     
     @objc func handleNewsGesture(_ gesture : UITapGestureRecognizer) {
-        //        let view = gesture.view
-        //        let tag = view?.tag
-        //
-        //        let safariViewController = SFSafariViewController(url:NSURL(string:  NewsManager.shared.getFakeDataArray()[tag ?? 0].url ?? "https://www.yahoo.com.tw")! as URL)
-        //        self.present(safariViewController, animated: true, completion: nil)
+                let view = gesture.view
+                let tag = view?.tag
         
-        let calculateVC = instantiate(storyboard: .main, viewController: .calculate)
-        UIApplication.topViewController()?.view.window?.rootViewController?.present(calculateVC, animated: true, completion: nil)
+                let safariViewController = SFSafariViewController(url:NSURL(string:  NewsManager.shared.getFakeDataArray()[tag ?? 0].url ?? "https://www.yahoo.com.tw")! as URL)
+                self.present(safariViewController, animated: true, completion: nil)
     }
     
     

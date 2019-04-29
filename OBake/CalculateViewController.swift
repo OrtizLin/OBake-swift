@@ -25,6 +25,7 @@ class CalculateViewController: UIViewController {
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        setNavBackBotton()
         kgTextField.inputView = UIView()
         kgTextField.delegate = self
         gTextField.inputView = UIView()
@@ -58,6 +59,10 @@ class CalculateViewController: UIViewController {
             cleanTextField()
         }
         
+    }
+    
+    func backButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 }
@@ -98,8 +103,16 @@ extension CalculateViewController: UITextFieldDelegate {
     }
     
     func showValueOnTextField(_ tag: Int){
-        
-        if tag != 999 {
+
+        if tag == 100{
+            if nowValue == "empty" || nowValue . contains(".") || nowValue.last == "."{
+                return
+            }
+            else{
+                nowValue += "."
+            }
+        }
+        else if tag != 999 {
             if nowValue == "empty"{
                 nowValue = String(tag)
             }
