@@ -18,8 +18,16 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var poundTextField: UITextField!
     @IBOutlet weak var ozTextField: UITextField!
     
+    @IBOutlet weak var sizePicker: UIPickerView!
+    @IBOutlet weak var kgTransTextField: UITextField!
+    @IBOutlet weak var gTransTextField: UITextField!
+    @IBOutlet weak var cattyTransTextField: UITextField!
+    @IBOutlet weak var poundTransTextField: UITextField!
+    @IBOutlet weak var ozTransTextField: UITextField!
+    
     var selectType:(WeightType) = .g
     var weightResult:(Weight)?
+    var weightTransferResult:(Weight)?
     var nowValue:(String) = "empty"
     
     override func viewDidLoad(){
@@ -36,6 +44,15 @@ class CalculateViewController: UIViewController {
         poundTextField.delegate = self
         ozTextField.inputView = UIView()
         ozTextField.delegate = self
+        
+        sizePicker.delegate = self
+        sizePicker.dataSource = self
+        kgTransTextField.isUserInteractionEnabled = false
+        gTransTextField.isUserInteractionEnabled = false
+        cattyTransTextField.isUserInteractionEnabled = false
+        poundTransTextField.isUserInteractionEnabled = false
+        ozTransTextField.isUserInteractionEnabled = false
+        hideTransTextField()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,6 +83,31 @@ class CalculateViewController: UIViewController {
     }
     
 }
+extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return SizeType.allCases.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return SizeType.allCases[row].rawValue
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
+        
+        guard nowValue != "empty",row != 0 else{
+            hideTransTextField()
+            return
+        }
+        weightTransferResult = WeightConvert.shared.sizeConvertValue(type: SizeType.allCases[row], value: weightResult!)
+        updateValueOnTransTextField()
+    }
+}
+
 
 extension CalculateViewController: UITextFieldDelegate {
     
@@ -99,6 +141,7 @@ extension CalculateViewController: UITextFieldDelegate {
         poundTextField.text = ""
         ozTextField.text = ""
         nowValue = "empty"
+        hideTransTextField()
         
     }
     
@@ -110,6 +153,7 @@ extension CalculateViewController: UITextFieldDelegate {
         
         nowValue = WeightConvert.shared.updateNowValue(tag, Value: nowValue)
         weightResult = WeightConvert.shared.weightConvertValue(type: selectType, value: Double(nowValue) ?? 0)
+        weightTransferResult = WeightConvert.shared.sizeConvertValue(type:SizeType.allCases[sizePicker.selectedRow(inComponent: 0)], value: weightResult!)
         
         kgTextField.text = "\(weightResult?.kg ?? 0)"
         gTextField.text = "\(weightResult?.g ?? 0)"
@@ -125,6 +169,33 @@ extension CalculateViewController: UITextFieldDelegate {
         case .oz: ozTextField.text = nowValue
         }
         
+        guard sizePicker.selectedRow(inComponent: 0) != 0 else{return}
+        updateValueOnTransTextField()
+        
+    }
+    
+    func updateValueOnTransTextField(){
+        
+        kgTransTextField.text = "\(weightTransferResult?.kg ?? 0)"
+        gTransTextField.text = "\(weightTransferResult?.g ?? 0)"
+        cattyTransTextField.text = "\(weightTransferResult?.twCatty ?? 0)"
+        poundTransTextField.text = "\(weightTransferResult?.lb ?? 0)"
+        ozTransTextField.text = "\(weightTransferResult?.oz ?? 0)"
+        
+        kgTransTextField.isHidden = false
+        gTransTextField.isHidden = false
+        cattyTransTextField.isHidden = false
+        poundTransTextField.isHidden = false
+        ozTransTextField.isHidden = false
+    }
+    
+    func hideTransTextField(){
+        //hidden transfer label
+        kgTransTextField.isHidden = true
+        gTransTextField.isHidden = true
+        cattyTransTextField.isHidden = true
+        poundTransTextField.isHidden = true
+        ozTransTextField.isHidden = true
     }
 
 }

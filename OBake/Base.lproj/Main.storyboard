@@ -296,15 +296,59 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2k0-A1-oj2">
+                                <rect key="frame" x="0.0" y="299" width="375" height="111"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-kZ-KTL">
+                                <rect key="frame" x="231" y="87" width="49.666666666666686" height="170"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="公斤" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vdu-U6-14q">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="公克" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBU-fp-Tuj">
+                                        <rect key="frame" x="0.0" y="35" width="49.666666666666664" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="台斤" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQo-7U-eio">
+                                        <rect key="frame" x="0.0" y="70" width="49.666666666666664" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="磅" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-Hd-M4e">
+                                        <rect key="frame" x="0.0" y="105" width="49.666666666666664" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="盎司" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-zo-vcG">
+                                        <rect key="frame" x="0.0" y="140" width="49.666666666666664" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2k0-A1-oj2" firstAttribute="top" secondItem="FkT-kZ-KTL" secondAttribute="bottom" constant="18" id="4hD-Ok-koU"/>
                             <constraint firstItem="CxN-XU-ZA7" firstAttribute="top" secondItem="Xh9-QT-iTK" secondAttribute="bottom" constant="-270" id="4y4-YB-9xq"/>
+                            <constraint firstItem="FkT-kZ-KTL" firstAttribute="leading" secondItem="pQI-15-FLJ" secondAttribute="trailing" constant="78.333333333333286" id="Da0-Zn-bf5"/>
                             <constraint firstItem="3IY-vs-y8g" firstAttribute="top" secondItem="Xh9-QT-iTK" secondAttribute="bottom" constant="-270" id="LMU-fW-ZG1"/>
+                            <constraint firstItem="2k0-A1-oj2" firstAttribute="leading" secondItem="zsx-Mk-wtM" secondAttribute="leading" id="OiR-Bf-zQe"/>
+                            <constraint firstItem="3IY-vs-y8g" firstAttribute="top" secondItem="2k0-A1-oj2" secondAttribute="bottom" constant="98" id="Pjr-Y6-q4G"/>
                             <constraint firstItem="Xh9-QT-iTK" firstAttribute="leading" secondItem="gYm-5Y-Fdl" secondAttribute="trailing" constant="-50" id="Rqb-To-ZeO"/>
                             <constraint firstItem="Xh9-QT-iTK" firstAttribute="top" secondItem="gYm-5Y-Fdl" secondAttribute="bottom" constant="-210" id="WLy-Wo-Wkk"/>
                             <constraint firstItem="pQI-15-FLJ" firstAttribute="leading" secondItem="gYm-5Y-Fdl" secondAttribute="trailing" constant="10" id="Zgb-ge-TYB"/>
                             <constraint firstItem="3ff-e3-vtl" firstAttribute="centerX" secondItem="zsx-Mk-wtM" secondAttribute="centerX" id="i84-Pq-w3f"/>
+                            <constraint firstItem="2k0-A1-oj2" firstAttribute="centerX" secondItem="3ff-e3-vtl" secondAttribute="centerX" id="q3j-u4-klu"/>
+                            <constraint firstItem="2k0-A1-oj2" firstAttribute="top" secondItem="pQI-15-FLJ" secondAttribute="bottom" constant="18" id="ruz-sH-ooN"/>
                             <constraint firstItem="3ff-e3-vtl" firstAttribute="top" secondItem="Xh9-QT-iTK" secondAttribute="bottom" constant="-270" id="tTS-q4-XJ2"/>
                             <constraint firstItem="3IY-vs-y8g" firstAttribute="leading" secondItem="3ff-e3-vtl" secondAttribute="trailing" constant="30" id="uuO-62-xX7"/>
                             <constraint firstItem="Xh9-QT-iTK" firstAttribute="top" secondItem="pQI-15-FLJ" secondAttribute="bottom" constant="-213" id="vSc-rP-ktb"/>
@@ -314,15 +358,21 @@
                     </view>
                     <connections>
                         <outlet property="cattyTextField" destination="7KP-Aw-dez" id="gKh-Kb-jte"/>
+                        <outlet property="cattyTransTextField" destination="bQo-7U-eio" id="E9N-BP-Ulp"/>
                         <outlet property="gTextField" destination="3wO-Le-boF" id="LhP-po-RbN"/>
+                        <outlet property="gTransTextField" destination="iBU-fp-Tuj" id="c5N-3Y-lGf"/>
                         <outlet property="kgTextField" destination="mor-nL-f4h" id="znb-yz-OKE"/>
+                        <outlet property="kgTransTextField" destination="Vdu-U6-14q" id="bUS-SS-4v5"/>
                         <outlet property="ozTextField" destination="lvS-w0-wSC" id="Ktz-DC-Cnf"/>
+                        <outlet property="ozTransTextField" destination="nJc-zo-vcG" id="CBz-0s-lgK"/>
                         <outlet property="poundTextField" destination="eo6-iK-UgD" id="Uyu-pg-721"/>
+                        <outlet property="poundTransTextField" destination="bbT-Hd-M4e" id="16m-YI-ajY"/>
+                        <outlet property="sizePicker" destination="2k0-A1-oj2" id="wgi-zV-MQ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SM-Ca-YMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329.375" y="129.92957746478874"/>
+            <point key="canvasLocation" x="1328.8" y="129.31034482758622"/>
         </scene>
     </scenes>
     <resources>

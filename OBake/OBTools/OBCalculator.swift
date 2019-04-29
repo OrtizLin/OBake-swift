@@ -35,7 +35,7 @@ class WeightConvert: WeightConvertion {
             basic = value * 0.028
         }
         
-        let weight = Weight(kg: round(1000*basic)/1000, g: round(1000*1000*basic)/1000, twCatty: round(1000 * 1.66 * basic)/1000 , lb:round(1000 * 2.2 * basic)/1000, oz:round(1000 * 35.2 * basic)/1000)
+        let weight = Weight(kg: round(100*basic)/100, g: round(1000*100*basic)/100, twCatty: round(100 * 1.66 * basic)/100 , lb:round(100 * 2.2 * basic)/100, oz:round(100 * 35.2 * basic)/100)
         
         return weight
     }
@@ -45,20 +45,15 @@ class WeightConvert: WeightConvertion {
         var basic: Double = 0
         
         switch type {
-        case .fourToEight:
-            basic = 2.8
-        case .fourToSix:
-            basic = 1.8
-        case .SixToFour:
-            basic = 0.6
-        case .SixToEight:
-            basic = 1.78
-        case .EightToFour:
-            basic = 0.4
-        case .EightToSix:
-            basic = 0.56
+        case .none: basic = 1.0
+        case .fourToEight: basic = 2.8
+        case .fourToSix: basic = 1.8
+        case .SixToFour: basic = 0.6
+        case .SixToEight: basic = 1.78
+        case .EightToFour: basic = 0.4
+        case .EightToSix: basic = 0.56
         }
-        let weight = Weight(kg: value.kg! * basic, g: value.g! * basic, twCatty: value.twCatty! * basic, lb: value.lb! * basic, oz: value.oz! * basic)
+        let weight = Weight(kg: round(100*value.kg!*basic)/100, g: round(100*value.g!*basic)/100, twCatty: round(100*value.twCatty!*basic)/100, lb: round(100*value.lb!*basic)/100, oz: round(100*value.oz!*basic)/100)
         
         return weight
     }

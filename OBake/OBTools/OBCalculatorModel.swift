@@ -16,13 +16,14 @@ enum WeightType {
     case oz
 }
 
-enum SizeType {
-    case fourToSix
-    case fourToEight
-    case SixToEight
-    case SixToFour
-    case EightToSix
-    case EightToFour
+enum SizeType: String, CaseIterable{
+    case none = "轉換成你要的尺寸"
+    case fourToSix = "4->6"
+    case fourToEight = "4->8"
+    case SixToEight = "6->8"
+    case SixToFour = "6->4"
+    case EightToSix = "8->6"
+    case EightToFour = "8->4"
 }
 
 class Weight {
