@@ -16,14 +16,20 @@ enum WeightType {
     case oz
 }
 
-enum SizeType: String, CaseIterable{
-    case none = "轉換成你要的尺寸"
+enum SizeType: String, CaseIterable {
+    case none = "轉換尺寸"
     case fourToSix = "4->6"
     case fourToEight = "4->8"
     case SixToEight = "6->8"
     case SixToFour = "6->4"
     case EightToSix = "8->6"
     case EightToFour = "8->4"
+}
+
+enum ShapeType: String, CaseIterable {
+    case none = "轉換形狀"
+    case circleToRectangle = "圓->長條"
+    case rectangleToCircle = "長條->圓"
 }
 
 class Weight {
@@ -33,7 +39,7 @@ class Weight {
     var lb: Double?
     var oz: Double?
     
-    init(kg: Double, g: Double, twCatty: Double, lb: Double, oz: Double){
+    init(kg: Double, g: Double, twCatty: Double, lb: Double, oz: Double) {
         self.kg = kg
         self.g = g
         self.twCatty = twCatty

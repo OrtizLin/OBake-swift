@@ -25,10 +25,11 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var poundTransTextField: UITextField!
     @IBOutlet weak var ozTransTextField: UITextField!
     
-    var selectType:(WeightType) = .g
-    var weightResult:(Weight)?
-    var weightTransferResult:(Weight)?
-    var nowValue:(String) = "empty"
+    var selectType: (WeightType) = .g
+    var weightResult: (Weight)?
+    var weightTransferResult: (Weight)?
+    var nowValue: (String) = "empty"
+    var selectShape: (ShapeType) = .none
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -86,24 +87,40 @@ class CalculateViewController: UIViewController {
 extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return SizeType.allCases.count
+        if component == 0 {
+            return SizeType.allCases.count
+        }
+        else {
+            return ShapeType.allCases.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return SizeType.allCases[row].rawValue
+        if component == 0 {
+            return SizeType.allCases[row].rawValue
+        }
+        else {
+            return ShapeType.allCases[row].rawValue
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         
-        guard nowValue != "empty",row != 0 else{
+        guard nowValue != "empty" else{
             hideTransTextField()
             return
         }
-        weightTransferResult = WeightConvert.shared.sizeConvertValue(type: SizeType.allCases[row], value: weightResult!)
+        
+        guard sizePicker.selectedRow(inComponent: 0) != 0 || sizePicker.selectedRow(inComponent: 1) != 0 else {
+            hideTransTextField()
+            return
+        }
+        
+        weightTransferResult = WeightConvert.shared.sizeConvertValue(type: SizeType.allCases[sizePicker.selectedRow(inComponent: 0)], shape:ShapeType.allCases[sizePicker.selectedRow(inComponent: 1)] ,value: weightResult!)
         updateValueOnTransTextField()
     }
 }
@@ -153,7 +170,7 @@ extension CalculateViewController: UITextFieldDelegate {
         
         nowValue = WeightConvert.shared.updateNowValue(tag, Value: nowValue)
         weightResult = WeightConvert.shared.weightConvertValue(type: selectType, value: Double(nowValue) ?? 0)
-        weightTransferResult = WeightConvert.shared.sizeConvertValue(type:SizeType.allCases[sizePicker.selectedRow(inComponent: 0)], value: weightResult!)
+        weightTransferResult = WeightConvert.shared.sizeConvertValue(type:SizeType.allCases[sizePicker.selectedRow(inComponent: 0)], shape:ShapeType.allCases[sizePicker.selectedRow(inComponent: 1)], value: weightResult!)
         
         kgTextField.text = "\(weightResult?.kg ?? 0)"
         gTextField.text = "\(weightResult?.g ?? 0)"

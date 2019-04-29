@@ -10,7 +10,7 @@ import Foundation
 
 protocol WeightConvertion {
     func weightConvertValue(type: WeightType , value: Double) -> Weight
-    func sizeConvertValue(type: SizeType, value: Weight) -> Weight
+    func sizeConvertValue(type: SizeType, shape: ShapeType, value: Weight) -> Weight
     func updateNowValue(_ tag: Int, Value: String) -> String
 }
 
@@ -40,7 +40,7 @@ class WeightConvert: WeightConvertion {
         return weight
     }
     
-    func sizeConvertValue(type: SizeType, value: Weight) -> Weight {
+    func sizeConvertValue(type: SizeType, shape: ShapeType, value: Weight) -> Weight {
         
         var basic: Double = 0
         
@@ -52,6 +52,11 @@ class WeightConvert: WeightConvertion {
         case .SixToEight: basic = 1.78
         case .EightToFour: basic = 0.4
         case .EightToSix: basic = 0.56
+        }
+        switch shape {
+        case .none: basic = basic * 1.0
+        case .circleToRectangle: basic = basic * 1.0
+        case .rectangleToCircle: basic = basic * 1.0
         }
         let weight = Weight(kg: round(100*value.kg!*basic)/100, g: round(100*value.g!*basic)/100, twCatty: round(100*value.twCatty!*basic)/100, lb: round(100*value.lb!*basic)/100, oz: round(100*value.oz!*basic)/100)
         
