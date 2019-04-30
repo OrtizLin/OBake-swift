@@ -35,6 +35,8 @@ class CalculateViewController: UIViewController {
         super.viewDidLoad()
         
         setNavBackBotton()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清除", style: .plain, target: self, action: #selector(clean))
+
         kgTextField.inputView = UIView()
         kgTextField.delegate = self
         gTextField.inputView = UIView()
@@ -81,6 +83,10 @@ class CalculateViewController: UIViewController {
     
     func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+   
+    @objc func clean() {
+        cleanTextField()
     }
     
 }
