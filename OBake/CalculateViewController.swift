@@ -53,7 +53,7 @@ class CalculateViewController: UIViewController {
         cattyTransTextField.isUserInteractionEnabled = false
         poundTransTextField.isUserInteractionEnabled = false
         ozTransTextField.isUserInteractionEnabled = false
-        hideTransTextField()
+        hideTransTextField(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -111,12 +111,12 @@ extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         
         guard nowValue != "empty" else{
-            hideTransTextField()
+            hideTransTextField(true)
             return
         }
         
         guard sizePicker.selectedRow(inComponent: 0) != 0 || sizePicker.selectedRow(inComponent: 1) != 0 else {
-            hideTransTextField()
+            hideTransTextField(true)
             return
         }
         
@@ -158,7 +158,7 @@ extension CalculateViewController: UITextFieldDelegate {
         poundTextField.text = ""
         ozTextField.text = ""
         nowValue = "empty"
-        hideTransTextField()
+        hideTransTextField(true)
         
     }
     
@@ -199,20 +199,16 @@ extension CalculateViewController: UITextFieldDelegate {
         poundTransTextField.text = "\(weightTransferResult?.lb ?? 0)"
         ozTransTextField.text = "\(weightTransferResult?.oz ?? 0)"
         
-        kgTransTextField.isHidden = false
-        gTransTextField.isHidden = false
-        cattyTransTextField.isHidden = false
-        poundTransTextField.isHidden = false
-        ozTransTextField.isHidden = false
+        hideTransTextField(false)
     }
     
-    func hideTransTextField(){
+    func hideTransTextField(_ hidden: Bool){
         //hidden transfer label
-        kgTransTextField.isHidden = true
-        gTransTextField.isHidden = true
-        cattyTransTextField.isHidden = true
-        poundTransTextField.isHidden = true
-        ozTransTextField.isHidden = true
+        kgTransTextField.isHidden = hidden
+        gTransTextField.isHidden = hidden
+        cattyTransTextField.isHidden = hidden
+        poundTransTextField.isHidden = hidden
+        ozTransTextField.isHidden = hidden
     }
 
 }
