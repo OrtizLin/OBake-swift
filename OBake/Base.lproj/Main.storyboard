@@ -479,14 +479,14 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="723"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWf-w0-ngG">
-                                        <rect key="frame" x="228" y="25" width="128" height="128"/>
+                                        <rect key="frame" x="228" y="48" width="128" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="128" id="0c1-Kt-jQW"/>
                                             <constraint firstAttribute="height" constant="128" id="83k-JS-NuX"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVg-E1-iJk">
-                                        <rect key="frame" x="40" y="604" width="296" height="60"/>
+                                        <rect key="frame" x="40" y="604" width="296" height="83"/>
                                         <color key="backgroundColor" red="0.047058823530000002" green="0.36078431370000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="查詢此老師課程">
@@ -523,7 +523,7 @@
                                     <constraint firstItem="jVg-E1-iJk" firstAttribute="leading" secondItem="cit-Pc-HIm" secondAttribute="leading" constant="40" id="7GP-dl-iOA"/>
                                     <constraint firstAttribute="trailing" secondItem="jVg-E1-iJk" secondAttribute="trailing" constant="40" id="NWS-sB-ieW"/>
                                     <constraint firstItem="jVg-E1-iJk" firstAttribute="top" secondItem="cit-Pc-HIm" secondAttribute="top" constant="604" id="QZl-e2-BHF"/>
-                                    <constraint firstItem="CWf-w0-ngG" firstAttribute="top" secondItem="cit-Pc-HIm" secondAttribute="top" constant="25" id="a6l-M9-0AG"/>
+                                    <constraint firstItem="CWf-w0-ngG" firstAttribute="top" secondItem="cit-Pc-HIm" secondAttribute="top" constant="48" id="a6l-M9-0AG"/>
                                     <constraint firstAttribute="bottom" secondItem="CWf-w0-ngG" secondAttribute="bottom" constant="570" id="e3s-lo-2w5"/>
                                     <constraint firstAttribute="bottom" secondItem="jVg-E1-iJk" secondAttribute="bottom" constant="59" id="hiO-0n-0AG"/>
                                     <constraint firstAttribute="trailing" secondItem="CWf-w0-ngG" secondAttribute="trailing" constant="20" id="pYl-fE-GOL"/>
