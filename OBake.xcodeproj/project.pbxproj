@@ -11,6 +11,7 @@
 		16CA6114AFC61372EA9DDAFE /* Pods_OBakeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8F6F22767194E6D54039D02 /* Pods_OBakeTests.framework */; };
 		451364E6227801A70012BD2C /* TeacherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451364E5227801A70012BD2C /* TeacherModel.swift */; };
 		451364EA22781F080012BD2C /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451364E922781F070012BD2C /* TeacherTableViewCell.swift */; };
+		451364EE22783CF00012BD2C /* TeacherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451364ED22783CF00012BD2C /* TeacherDetailViewController.swift */; };
 		452D7E672276E0C400A30720 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D7E662276E0C400A30720 /* UIViewController.swift */; };
 		459224342272A0AC0068DE5B /* OBCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459224332272A0AC0068DE5B /* OBCalculatorModel.swift */; };
 		459224382272B0BB0068DE5B /* OBNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459224372272B0BB0068DE5B /* OBNewsModel.swift */; };
@@ -55,6 +56,7 @@
 		4284616392F1F2CE493775DB /* Pods-OBakeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OBakeTests.debug.xcconfig"; path = "Target Support Files/Pods-OBakeTests/Pods-OBakeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		451364E5227801A70012BD2C /* TeacherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherModel.swift; sourceTree = "<group>"; };
 		451364E922781F070012BD2C /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
+		451364ED22783CF00012BD2C /* TeacherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDetailViewController.swift; sourceTree = "<group>"; };
 		452D7E662276E0C400A30720 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		459224332272A0AC0068DE5B /* OBCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBCalculatorModel.swift; sourceTree = "<group>"; };
 		459224372272B0BB0068DE5B /* OBNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBNewsModel.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				459A66F8226C5C4F00C70B70 /* GlobalSettings.swift */,
 				459A66E4226C3DDC00C70B70 /* MainViewController.swift */,
 				45F21E7822718DD500992BD4 /* TeacherViewController.swift */,
+				451364ED22783CF00012BD2C /* TeacherDetailViewController.swift */,
 				4592243B2272B4A30068DE5B /* CalculateViewController.swift */,
 				459A66FA226C5E0E00C70B70 /* OBTools */,
 				459A66B8226C385B00C70B70 /* Main.storyboard */,
@@ -423,6 +426,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-OBake/Pods-OBake-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -430,6 +434,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -457,6 +462,7 @@
 				459224342272A0AC0068DE5B /* OBCalculatorModel.swift in Sources */,
 				459224382272B0BB0068DE5B /* OBNewsModel.swift in Sources */,
 				4592243A2272B30F0068DE5B /* OBCalculator.swift in Sources */,
+				451364EE22783CF00012BD2C /* TeacherDetailViewController.swift in Sources */,
 				45F21E7122714BB400992BD4 /* OBNewsManager.swift in Sources */,
 				459A66F9226C5C4F00C70B70 /* GlobalSettings.swift in Sources */,
 			);

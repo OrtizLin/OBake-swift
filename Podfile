@@ -8,7 +8,8 @@ target 'OBake' do
   # Pods for OBake 
 
 pod 'FSPagerView'
-pod 'Kingfisher'
+pod 'Kingfisher','~> 5.3.1'
+pod 'Toast-Swift', '~> 4.0.0'
 
  target 'OBakeTests' do
     inherit! :search_paths

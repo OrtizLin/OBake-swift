@@ -63,7 +63,9 @@ extension TeacherViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("didselect")
+       
+    self.performSegue(withIdentifier: "teacherDetail", sender: nil)
+     
     }
 }
 

@@ -82,9 +82,6 @@ class CalculateViewController: UIViewController {
     func backButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-//    @IBAction func goDetail(_ sender: Any) {
-//        self.performSegue(withIdentifier: "goDetail", sender: sender)
-//    }
     
 }
 extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource {

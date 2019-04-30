@@ -1,20 +1,24 @@
 PODS:
   - FSPagerView (0.8.2)
   - Kingfisher (5.3.1)
+  - Toast-Swift (4.0.1)
 
 DEPENDENCIES:
   - FSPagerView
-  - Kingfisher
+  - Kingfisher (~> 5.3.1)
+  - Toast-Swift (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - FSPagerView
     - Kingfisher
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   Kingfisher: d9e7e0b209b59b8f9873aa2f37654e81a7beea51
+  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
 
-PODFILE CHECKSUM: 79c752326c1793a78ab4803439e9c648655cad84
+PODFILE CHECKSUM: 9b0ad14efa9281bef255ecb1790581cb16182fc6
 
 COCOAPODS: 1.6.1
