@@ -55,8 +55,8 @@ class WeightConvert: WeightConvertion {
         }
         switch shape {
         case .none: basic = basic * 1.0
-        case .circleToRectangle: basic = basic * 1.0
-        case .rectangleToCircle: basic = basic * 1.0
+        case .circleToRectangle: basic = basic * 2.0
+        case .rectangleToCircle: basic = basic * 0.5
         }
         let weight = Weight(kg: round(100*value.kg!*basic)/100, g: round(100*value.g!*basic)/100, twCatty: round(100*value.twCatty!*basic)/100, lb: round(100*value.lb!*basic)/100, oz: round(100*value.oz!*basic)/100)
         
