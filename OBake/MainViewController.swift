@@ -29,5 +29,9 @@ class MainViewController: UIViewController {
         let nav = UINavigationController(rootViewController: calculateVC)
         present(nav, animated: true, completion:  nil)
     }
+    @IBAction func tempTwoButton(_ sender: Any) {let calculateVC = instantiate(storyboard: .main, viewController: .teacher)
+        let nav = UINavigationController(rootViewController: calculateVC)
+        present(nav, animated: true, completion:  nil)
+    }
 }
 

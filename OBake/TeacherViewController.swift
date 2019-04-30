@@ -13,7 +13,8 @@ class TeacherViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        self.view.backgroundColor = .black
+        setNavBackBotton()
+   
     }
     
     override func viewWillAppear(_ animated: Bool) {

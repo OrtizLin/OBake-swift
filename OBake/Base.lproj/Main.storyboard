@@ -29,9 +29,19 @@
                                     <action selector="temp_button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ydn-IW-7vR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qi0-b9-CbJ">
+                                <rect key="frame" x="164" y="731" width="62" height="30"/>
+                                <state key="normal" title="老師簡介"/>
+                                <connections>
+                                    <action selector="tempTwoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgs-7p-EHb"/>
+                                    <action selector="temp_button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qC-1Z-BWJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Qi0-b9-CbJ" firstAttribute="leading" secondItem="fjc-GE-cMh" secondAttribute="trailing" constant="84" id="7wd-cs-Xbq"/>
+                            <constraint firstItem="Qi0-b9-CbJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-47" id="PR7-6K-zGK"/>
                             <constraint firstItem="bfm-O1-9Jd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="S06-Cw-hmr"/>
                             <constraint firstItem="fjc-GE-cMh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-47" id="bsB-mX-t8t"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="fjc-GE-cMh" secondAttribute="trailing" constant="-80" id="jhq-oG-OxH"/>
@@ -47,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101" y="130"/>
+            <point key="canvasLocation" x="261.60000000000002" y="-200.24630541871923"/>
         </scene>
         <!--Calculate View Controller-->
         <scene sceneID="VQQ-qb-7kZ">
@@ -374,6 +384,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SM-Ca-YMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1328.8" y="129.31034482758622"/>
+        </scene>
+        <!--Teacher View Controller-->
+        <scene sceneID="3I2-tH-v0Y">
+            <objects>
+                <viewController storyboardIdentifier="TeacherViewController" id="F66-Dk-leo" customClass="TeacherViewController" customModule="OBake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nxr-s4-JdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="a2A-Ks-IMG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2FQ-T8-84Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328.8" y="-606.6502463054187"/>
         </scene>
     </scenes>
     <resources>
