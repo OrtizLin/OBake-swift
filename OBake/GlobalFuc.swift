@@ -21,6 +21,8 @@ enum StoryboardName: String {
 enum ViewControllerID: String {
     case main = "MainViewController"
     case teacher = "TeacherViewController"
-    case calculate = "CalculateViewController"
     case teacherDetail = "TeacherDetailViewController"
+    case calculate = "CalculateViewController"
+    case classes = "ClassViewController"
+    case classesDetail = "ClassDetailViewController"
 }

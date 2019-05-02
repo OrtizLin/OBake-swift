@@ -24,13 +24,20 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func temp_button(_ sender: Any) {
+    @IBAction func tempButton(_ sender: Any) {
         let calculateVC = instantiate(storyboard: .main, viewController: .calculate)
         let nav = UINavigationController(rootViewController: calculateVC)
         present(nav, animated: true, completion:  nil)
     }
+    
     @IBAction func tempTwoButton(_ sender: Any) {let calculateVC = instantiate(storyboard: .main, viewController: .teacher)
         let nav = UINavigationController(rootViewController: calculateVC)
+        present(nav, animated: true, completion:  nil)
+    }
+    
+    @IBAction func tampThreeButton(_ sender: Any) {
+        let classVC = instantiate(storyboard: .main, viewController: .classes)
+        let nav = UINavigationController(rootViewController: classVC)
         present(nav, animated: true, completion:  nil)
     }
 }
