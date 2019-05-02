@@ -24,6 +24,14 @@ class TeacherDetailViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        configureData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    func configureData() {
         self.navigationItem.title = "教師資訊";
         detailScrollView.contentSize.width = 0
         detailScrollView.isDirectionalLockEnabled = true
@@ -40,9 +48,6 @@ class TeacherDetailViewController: UIViewController {
         photoImageView?.contentMode = .scaleAspectFit
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
     @IBAction func searchButtonTap(_ sender: Any) {
         self.view.makeToast("請選擇其他老師的課程。", duration: 2.0, point: CGPoint(x: screenWidth/2, y: screenHeight/2), title: "課程已滿", image: UIImage(named: "noCourse")) { didTap in
             if didTap {
