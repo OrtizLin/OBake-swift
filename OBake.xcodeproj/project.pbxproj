@@ -13,6 +13,7 @@
 		451364EA22781F080012BD2C /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451364E922781F070012BD2C /* TeacherTableViewCell.swift */; };
 		451364EE22783CF00012BD2C /* TeacherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451364ED22783CF00012BD2C /* TeacherDetailViewController.swift */; };
 		452D7E672276E0C400A30720 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452D7E662276E0C400A30720 /* UIViewController.swift */; };
+		4550AD17227BD9490035A430 /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4550AD16227BD9490035A430 /* SizeViewController.swift */; };
 		459224342272A0AC0068DE5B /* OBCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459224332272A0AC0068DE5B /* OBCalculatorModel.swift */; };
 		459224382272B0BB0068DE5B /* OBNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459224372272B0BB0068DE5B /* OBNewsModel.swift */; };
 		4592243A2272B30F0068DE5B /* OBCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459224392272B30F0068DE5B /* OBCalculator.swift */; };
@@ -62,6 +63,7 @@
 		451364E922781F070012BD2C /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
 		451364ED22783CF00012BD2C /* TeacherDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeacherDetailViewController.swift; sourceTree = "<group>"; };
 		452D7E662276E0C400A30720 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4550AD16227BD9490035A430 /* SizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		459224332272A0AC0068DE5B /* OBCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBCalculatorModel.swift; sourceTree = "<group>"; };
 		459224372272B0BB0068DE5B /* OBNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBNewsModel.swift; sourceTree = "<group>"; };
 		459224392272B30F0068DE5B /* OBCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OBCalculator.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				45C0A83E227AC12D00EF4EA9 /* ClassViewController.swift */,
 				45CF9C6C227ADD3C00AA9D78 /* ClassDetailViewController.swift */,
 				4592243B2272B4A30068DE5B /* CalculateViewController.swift */,
+				4550AD16227BD9490035A430 /* SizeViewController.swift */,
 				459A66FA226C5E0E00C70B70 /* OBTools */,
 				459A66B8226C385B00C70B70 /* Main.storyboard */,
 				459A66BB226C385E00C70B70 /* Assets.xcassets */,
@@ -461,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451364E6227801A70012BD2C /* TeacherModel.swift in Sources */,
+				4550AD17227BD9490035A430 /* SizeViewController.swift in Sources */,
 				452D7E672276E0C400A30720 /* UIViewController.swift in Sources */,
 				4592243E2272BE2E0068DE5B /* UIApplication.swift in Sources */,
 				459A66E5226C3DDC00C70B70 /* MainViewController.swift in Sources */,

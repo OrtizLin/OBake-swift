@@ -25,4 +25,5 @@ enum ViewControllerID: String {
     case calculate = "CalculateViewController"
     case classes = "ClassViewController"
     case classesDetail = "ClassDetailViewController"
+    case size = "SizeViewController"
 }

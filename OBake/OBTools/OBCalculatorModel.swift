@@ -32,6 +32,13 @@ enum ShapeType: String, CaseIterable {
     case rectangleToCircle = "長條->圓"
 }
 
+enum ShapeSelect: Int {
+    case circleToCircle = 0
+    case circleToSquare = 1
+    case squareToSquare = 2
+    case squareToCircle = 3
+}
+
 class Weight {
     var kg: Double?
     var g: Double?

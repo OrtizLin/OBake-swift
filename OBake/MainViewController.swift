@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func tempButton(_ sender: Any) {
-        let calculateVC = instantiate(storyboard: .main, viewController: .calculate)
+        let calculateVC = instantiate(storyboard: .main, viewController: .size)
         let nav = UINavigationController(rootViewController: calculateVC)
         present(nav, animated: true, completion:  nil)
     }

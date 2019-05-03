@@ -480,6 +480,155 @@
             </objects>
             <point key="canvasLocation" x="1330.4000000000001" y="828.32512315270935"/>
         </scene>
+        <!--Size View Controller-->
+        <scene sceneID="nge-TX-doJ">
+            <objects>
+                <viewController storyboardIdentifier="SizeViewController" id="W9W-xX-LHk" customClass="SizeViewController" customModule="OBake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U9M-hC-Nl7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="LnA-Ay-2aT">
+                                <rect key="frame" x="128" y="728" width="119" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="W9W-xX-LHk" eventType="valueChanged" id="oCI-Ga-TOb"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="Wfu-tu-Sq7">
+                                <rect key="frame" x="-22" y="648" width="123" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="OMj-K3-172"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="W9W-xX-LHk" eventType="valueChanged" id="kVE-qq-rtt"/>
+                                </connections>
+                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="1PX-qS-VWW">
+                                <rect key="frame" x="37" y="96" width="301" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axx-JO-8Bl">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="圓轉圓"/>
+                                        <connections>
+                                            <action selector="selectType:" destination="W9W-xX-LHk" eventType="touchUpInside" id="aRc-GL-Eg7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oxe-D6-qff">
+                                        <rect key="frame" x="85" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="圓轉方"/>
+                                        <connections>
+                                            <action selector="selectType:" destination="W9W-xX-LHk" eventType="touchUpInside" id="lIA-Ky-9ZU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9W-kC-skJ">
+                                        <rect key="frame" x="170" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="方轉方"/>
+                                        <connections>
+                                            <action selector="selectType:" destination="W9W-xX-LHk" eventType="touchUpInside" id="QdK-VY-Yjp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBY-N3-y7q">
+                                        <rect key="frame" x="255" y="0.0" width="46" height="30"/>
+                                        <state key="normal" title="方轉圓"/>
+                                        <connections>
+                                            <action selector="selectType:" destination="W9W-xX-LHk" eventType="touchUpInside" id="QdR-1G-HR2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="xxC-iN-VcF">
+                                <rect key="frame" x="-22" y="278" width="123" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="S2n-AQ-1Mv"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="W9W-xX-LHk" eventType="valueChanged" id="an2-mR-T5w"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="sHO-kq-bP2">
+                                <rect key="frame" x="128" y="392" width="119" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="W9W-xX-LHk" eventType="valueChanged" id="Enm-Ii-6CG"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="bER-ZA-eWc">
+                                <rect key="frame" x="290" y="278" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="8Qr-ze-dXy"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="W9W-xX-LHk" eventType="valueChanged" id="RBe-QL-X3l"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="14" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-yr-wee">
+                                <rect key="frame" x="290" y="648" width="118" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="ew3-X4-hMH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="W9W-xX-LHk" eventType="valueChanged" id="y6O-3o-td6"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請選擇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idR-aF-hdT">
+                                <rect key="frame" x="25" y="158" width="325" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOF-Mv-ywS">
+                                <rect key="frame" x="25" y="198" width="325" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.99696405440000002" green="0.1134880466" blue="0.12553947600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LnA-Ay-2aT" firstAttribute="top" secondItem="Wfu-tu-Sq7" secondAttribute="bottom" constant="50" id="0WS-Ad-1c8"/>
+                            <constraint firstItem="sdk-yr-wee" firstAttribute="trailing" secondItem="fTD-nI-3Uw" secondAttribute="trailing" constant="31" id="164-sa-ckN"/>
+                            <constraint firstItem="fTD-nI-3Uw" firstAttribute="bottom" secondItem="LnA-Ay-2aT" secondAttribute="bottom" constant="20" id="4NY-DY-B8g"/>
+                            <constraint firstItem="bER-ZA-eWc" firstAttribute="trailing" secondItem="fTD-nI-3Uw" secondAttribute="trailing" constant="31" id="7cq-oW-xHF"/>
+                            <constraint firstItem="1PX-qS-VWW" firstAttribute="top" secondItem="fTD-nI-3Uw" secondAttribute="top" constant="52" id="Ar9-3Y-OZn"/>
+                            <constraint firstItem="sHO-kq-bP2" firstAttribute="centerX" secondItem="fTD-nI-3Uw" secondAttribute="centerX" id="DE5-D0-aGZ"/>
+                            <constraint firstItem="bER-ZA-eWc" firstAttribute="top" secondItem="fTD-nI-3Uw" secondAttribute="top" constant="234" id="DYy-Cz-RDw"/>
+                            <constraint firstItem="tOF-Mv-ywS" firstAttribute="leading" secondItem="fTD-nI-3Uw" secondAttribute="leading" constant="25" id="GBe-50-Bu5"/>
+                            <constraint firstItem="xxC-iN-VcF" firstAttribute="top" secondItem="fTD-nI-3Uw" secondAttribute="top" constant="234" id="Rq6-Ut-5sD"/>
+                            <constraint firstItem="fTD-nI-3Uw" firstAttribute="trailing" secondItem="tOF-Mv-ywS" secondAttribute="trailing" constant="25" id="XfL-5a-bsG"/>
+                            <constraint firstItem="fTD-nI-3Uw" firstAttribute="trailing" secondItem="1PX-qS-VWW" secondAttribute="trailing" constant="37" id="Xyd-5e-as7"/>
+                            <constraint firstItem="Wfu-tu-Sq7" firstAttribute="leading" secondItem="fTD-nI-3Uw" secondAttribute="leading" constant="-20" id="geS-Ms-Sr8"/>
+                            <constraint firstItem="tOF-Mv-ywS" firstAttribute="top" secondItem="idR-aF-hdT" secondAttribute="bottom" constant="22" id="jt2-fc-mIg"/>
+                            <constraint firstItem="idR-aF-hdT" firstAttribute="leading" secondItem="fTD-nI-3Uw" secondAttribute="leading" constant="25" id="jv6-Do-pqF"/>
+                            <constraint firstItem="LnA-Ay-2aT" firstAttribute="leading" secondItem="fTD-nI-3Uw" secondAttribute="leading" constant="130" id="mFN-Mo-72d"/>
+                            <constraint firstItem="LnA-Ay-2aT" firstAttribute="top" secondItem="sdk-yr-wee" secondAttribute="bottom" constant="50" id="plJ-tw-a66"/>
+                            <constraint firstItem="sHO-kq-bP2" firstAttribute="leading" secondItem="fTD-nI-3Uw" secondAttribute="leading" constant="130" id="sJo-TU-oJ8"/>
+                            <constraint firstItem="idR-aF-hdT" firstAttribute="top" secondItem="1PX-qS-VWW" secondAttribute="bottom" constant="32" id="t86-RW-qfR"/>
+                            <constraint firstItem="fTD-nI-3Uw" firstAttribute="leading" secondItem="xxC-iN-VcF" secondAttribute="leading" constant="20" id="tAq-fz-RD3"/>
+                            <constraint firstItem="fTD-nI-3Uw" firstAttribute="trailing" secondItem="idR-aF-hdT" secondAttribute="trailing" constant="25" id="uGe-cI-f3G"/>
+                            <constraint firstItem="LnA-Ay-2aT" firstAttribute="centerX" secondItem="U9M-hC-Nl7" secondAttribute="centerX" id="waQ-rr-IUc"/>
+                            <constraint firstItem="sHO-kq-bP2" firstAttribute="top" secondItem="fTD-nI-3Uw" secondAttribute="top" constant="348" id="yph-e5-TII"/>
+                            <constraint firstItem="1PX-qS-VWW" firstAttribute="leading" secondItem="fTD-nI-3Uw" secondAttribute="leading" constant="37" id="zQr-eZ-i22"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fTD-nI-3Uw"/>
+                    </view>
+                    <connections>
+                        <outlet property="circleToCircle" destination="axx-JO-8Bl" id="CuF-23-iix"/>
+                        <outlet property="circleToSquare" destination="Oxe-D6-qff" id="I2l-2a-S2b"/>
+                        <outlet property="heightSlider" destination="sdk-yr-wee" id="sdg-RH-sZV"/>
+                        <outlet property="heightSliderOne" destination="bER-ZA-eWc" id="12F-hT-QmN"/>
+                        <outlet property="horizontalSlider" destination="LnA-Ay-2aT" id="Phb-hz-xWC"/>
+                        <outlet property="horizontalSliderOne" destination="sHO-kq-bP2" id="TyR-k9-iQj"/>
+                        <outlet property="resultLabel" destination="tOF-Mv-ywS" id="qhb-PA-q0n"/>
+                        <outlet property="sizeLabel" destination="idR-aF-hdT" id="Uq1-E1-Jso"/>
+                        <outlet property="squareToCircle" destination="cBY-N3-y7q" id="qMJ-HW-6WC"/>
+                        <outlet property="squareToSquare" destination="G9W-kC-skJ" id="lD3-AL-dzi"/>
+                        <outlet property="verticalSlider" destination="Wfu-tu-Sq7" id="jZ3-GX-o3p"/>
+                        <outlet property="verticalSliderOne" destination="xxC-iN-VcF" id="8K0-ho-sMD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EJL-fV-sVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1333.5999999999999" y="1583.497536945813"/>
+        </scene>
         <!--Class Detail View Controller-->
         <scene sceneID="CZk-gC-hjY">
             <objects>
