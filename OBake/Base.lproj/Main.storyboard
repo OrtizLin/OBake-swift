@@ -721,7 +721,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t2l-fA-aiR">
-                                <rect key="frame" x="0.0" y="78" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="49" width="375" height="734"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeacherTableViewCell" rowHeight="213" id="8ls-1u-hHr" customClass="TeacherTableViewCell" customModule="OBake">
@@ -778,14 +778,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="a2A-Ks-IMG" firstAttribute="trailing" secondItem="t2l-fA-aiR" secondAttribute="trailing" id="MbI-QZ-uyU"/>
-                            <constraint firstItem="t2l-fA-aiR" firstAttribute="height" secondItem="a2A-Ks-IMG" secondAttribute="height" id="V07-x2-fri"/>
-                            <constraint firstItem="t2l-fA-aiR" firstAttribute="top" secondItem="a2A-Ks-IMG" secondAttribute="bottom" constant="-700" id="bew-X6-DAe"/>
-                            <constraint firstItem="t2l-fA-aiR" firstAttribute="leading" secondItem="a2A-Ks-IMG" secondAttribute="leading" id="cK5-81-2PQ"/>
-                            <constraint firstItem="t2l-fA-aiR" firstAttribute="top" secondItem="a2A-Ks-IMG" secondAttribute="top" constant="34" id="oo0-6w-tCF"/>
-                            <constraint firstItem="t2l-fA-aiR" firstAttribute="leading" secondItem="nxr-s4-JdQ" secondAttribute="leading" id="yvk-k5-0qk"/>
-                            <constraint firstAttribute="trailing" secondItem="t2l-fA-aiR" secondAttribute="trailing" id="z4a-7n-0DT"/>
-                            <constraint firstItem="t2l-fA-aiR" firstAttribute="bottom" secondItem="a2A-Ks-IMG" secondAttribute="bottom" constant="34" id="zZ2-1u-YLj"/>
+                            <constraint firstItem="t2l-fA-aiR" firstAttribute="leading" secondItem="a2A-Ks-IMG" secondAttribute="leading" id="Z7P-RC-Jhk"/>
+                            <constraint firstItem="t2l-fA-aiR" firstAttribute="bottom" secondItem="a2A-Ks-IMG" secondAttribute="bottom" constant="5" id="d8i-Vy-OYh"/>
+                            <constraint firstItem="t2l-fA-aiR" firstAttribute="top" secondItem="a2A-Ks-IMG" secondAttribute="top" constant="5" id="gfZ-uW-NZd"/>
+                            <constraint firstItem="a2A-Ks-IMG" firstAttribute="trailing" secondItem="t2l-fA-aiR" secondAttribute="trailing" id="iLF-xH-gui"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a2A-Ks-IMG"/>
                     </view>
@@ -817,8 +813,11 @@
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVg-E1-iJk">
-                                        <rect key="frame" x="40" y="604" width="296" height="83"/>
+                                        <rect key="frame" x="40" y="561" width="296" height="65"/>
                                         <color key="backgroundColor" red="0.047058823530000002" green="0.36078431370000003" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="7FW-Db-YpA"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="查詢此老師課程">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -853,10 +852,9 @@
                                     <constraint firstItem="CWf-w0-ngG" firstAttribute="leading" secondItem="cit-Pc-HIm" secondAttribute="leading" constant="228" id="2H2-ka-wKz"/>
                                     <constraint firstItem="jVg-E1-iJk" firstAttribute="leading" secondItem="cit-Pc-HIm" secondAttribute="leading" constant="40" id="7GP-dl-iOA"/>
                                     <constraint firstAttribute="trailing" secondItem="jVg-E1-iJk" secondAttribute="trailing" constant="40" id="NWS-sB-ieW"/>
-                                    <constraint firstItem="jVg-E1-iJk" firstAttribute="top" secondItem="cit-Pc-HIm" secondAttribute="top" constant="604" id="QZl-e2-BHF"/>
                                     <constraint firstItem="CWf-w0-ngG" firstAttribute="top" secondItem="cit-Pc-HIm" secondAttribute="top" constant="48" id="a6l-M9-0AG"/>
                                     <constraint firstAttribute="bottom" secondItem="CWf-w0-ngG" secondAttribute="bottom" constant="570" id="e3s-lo-2w5"/>
-                                    <constraint firstAttribute="bottom" secondItem="jVg-E1-iJk" secondAttribute="bottom" constant="59" id="hiO-0n-0AG"/>
+                                    <constraint firstAttribute="bottom" secondItem="jVg-E1-iJk" secondAttribute="bottom" constant="120" id="hiO-0n-0AG"/>
                                     <constraint firstAttribute="trailing" secondItem="CWf-w0-ngG" secondAttribute="trailing" constant="20" id="pYl-fE-GOL"/>
                                 </constraints>
                             </scrollView>
