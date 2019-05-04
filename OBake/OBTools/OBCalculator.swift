@@ -107,6 +107,7 @@ class WeightConvert: WeightConvertion {
     }
     
     func updatePath(_ x: Int, y: Int, z: Int, circle: Bool) -> UIBezierPath {
+        //draw square
         if circle == false {
             let path = UIBezierPath()
             var point = CGPoint(x: 0+x, y: 0-x)
@@ -136,13 +137,14 @@ class WeightConvert: WeightConvertion {
 
             return path
         }
+        // draw circle
         else {
             let path =  UIBezierPath(ovalIn: CGRect(x: -44-x, y: -64-z, width: 94+x, height: 74+x))
             var point = CGPoint(x: -44-x, y: -22-z)
             path.move(to: point)
-            point = CGPoint(x: -42-x, y: 20+x)
+            point = CGPoint(x: -42-x, y: 5+x)
             path.addLine(to: point)
-            path.addCurve(to: CGPoint(x:48, y: 20+x), controlPoint1: CGPoint(x: -18-x, y: 60+x), controlPoint2: CGPoint(x: 27, y: 60+x))
+            path.addCurve(to: CGPoint(x:48, y: 5+x), controlPoint1: CGPoint(x: -18-x, y: 40+x), controlPoint2: CGPoint(x: 27, y: 40+x))
             point = CGPoint(x: 50, y: -22-z)
             path.addLine(to: point)
             

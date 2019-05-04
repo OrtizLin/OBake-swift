@@ -61,16 +61,16 @@ class SizeViewController: UIViewController {
     }
     
     func configureShape() {
-        topShape.fillColor = nil // 若想為透明可設為 nil
-        topShape.lineWidth = 1 // 線條寬度
-        topShape.strokeColor = UIColor.black.cgColor // 線條顏色
+        topShape.fillColor = nil
+        topShape.lineWidth = 1
+        topShape.strokeColor = UIColor.init(red: 253/255, green: 103/255, blue: 43/255, alpha: 1).cgColor
         topShape.position = CGPoint(x: view.center.x, y:  horizontalSliderOne.frame.origin.y - 40)
         view.layer.addSublayer(topShape)
         
-        bottomShape.fillColor = nil // 若想為透明可設為 nil
-        bottomShape.lineWidth = 1 // 線條寬度
-        bottomShape.strokeColor = UIColor.black.cgColor // 線條顏色
-        bottomShape.position = CGPoint(x: view.center.x, y: screenHeight - 130)
+        bottomShape.fillColor = nil
+        bottomShape.lineWidth = 1
+        bottomShape.strokeColor = UIColor.init(red: 21/255, green: 174/255, blue: 48/255, alpha: 1).cgColor
+        bottomShape.position = CGPoint(x: view.center.x, y: horizontalSlider.frame.origin.y - 40)
         view.layer.addSublayer(bottomShape)
     }
     
@@ -124,6 +124,20 @@ class SizeViewController: UIViewController {
     }
     
     @IBAction func selectType(_ sender: UIButton) {
+        //chanage all button to default color
+        circleToCircle.setTitleColor(.lightGray, for: .normal)
+        circleToSquare.setTitleColor(.lightGray, for: .normal)
+        squareToSquare.setTitleColor(.lightGray, for: .normal)
+        squareToCircle.setTitleColor(.lightGray, for: .normal)
+        
+        //select to change color
+        switch sender.tag {
+        case 0: circleToCircle.setTitleColor(.blue, for: .normal)
+        case 1: circleToSquare.setTitleColor(.blue, for: .normal)
+        case 2: squareToSquare.setTitleColor(.blue, for: .normal)
+        default: squareToCircle.setTitleColor(.blue, for: .normal)
+        }
+        
         shapeSelect = ShapeSelect(rawValue: sender.tag)!
         configureViewAfterSelect()
         valueChange()
