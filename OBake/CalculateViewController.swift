@@ -90,20 +90,12 @@ class CalculateViewController: UIViewController {
 extension CalculateViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == kgTextField {
-           selectType = .kg
-        }
-        else if textField == gTextField {
-            selectType = .g
-        }
-        else if textField == cattyTextField{
-            selectType = .twCatty
-        }
-        else if textField == poundTextField{
-            selectType = .lb
-        }
-        else{
-            selectType = .oz
+        switch textField {
+        case kgTextField: selectType = .kg
+        case gTextField: selectType = .g
+        case cattyTextField: selectType = .twCatty
+        case poundTextField: selectType = .lb
+        default: selectType = .oz
         }
         
         cleanTextField()
@@ -151,6 +143,7 @@ extension CalculateViewController: UITextFieldDelegate {
         case .twCatty: cattyTextField.text = nowValue
         case .oz: ozTextField.text = nowValue
         }
+        
     }
     
     func updateValueOnTransTextField(){
