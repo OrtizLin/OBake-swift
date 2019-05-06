@@ -16,7 +16,7 @@ extension UIViewController {
         navigationBarAppearnce.barTintColor = UIColor(red: 0.180, green: 0.459, blue: 0.733, alpha: 1.00)
         
         navigationBarAppearnce.tintColor = UIColor.white
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backArrow"),
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "backArrow"),
                                                            style: .plain, target: self, action: #selector(navBackAction))
         // Next Nav Page
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

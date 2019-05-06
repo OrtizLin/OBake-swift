@@ -49,7 +49,7 @@ class TeacherDetailViewController: UIViewController {
     }
     
     @IBAction func searchButtonTap(_ sender: Any) {
-        self.view.makeToast("請選擇其他老師的課程。", duration: 2.0, point: CGPoint(x: screenWidth/2, y: screenHeight/2), title: "課程已滿", image: UIImage(named: "noCourse")) { didTap in
+        self.view.makeToast("請選擇其他老師的課程。", duration: 2.0, point: CGPoint(x: screenWidth/2, y: screenHeight/2), title: "課程已滿", image: #imageLiteral(resourceName: "noCourse")) { didTap in
             if didTap {
                 print("completion from tap")
             } else {

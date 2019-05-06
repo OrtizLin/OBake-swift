@@ -69,7 +69,7 @@ extension ClassViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if ClassManager.shared.getFakeClassArray()[indexPath.row].lastCount == 0 {
-            self.view.makeToast("請選擇其他課程。", duration: 1.0, point: CGPoint(x: screenWidth/2, y: screenHeight/2), title: "課程已滿", image: UIImage(named: "noCourse")) { didTap in
+            self.view.makeToast("請選擇其他課程。", duration: 1.0, point: CGPoint(x: screenWidth/2, y: screenHeight/2), title: "課程已滿", image: #imageLiteral(resourceName: "noCourse")) { didTap in
                 if didTap {
                     print("completion from tap")
                 } else {
