@@ -53,12 +53,7 @@ class SizeViewController: UIViewController {
         heightSliderOne.transform = heightSliderOne.transform.rotated(by: CGFloat(1.5 * Float.pi))
         heightSlider.transform = heightSlider.transform.rotated(by: CGFloat(1.5 * Float.pi))
         
-        verticalSlider.isHidden = true
-        verticalSliderOne.isHidden = true
-        horizontalSlider.isHidden = true
-        horizontalSliderOne.isHidden = true
-        heightSlider.isHidden = true
-        heightSliderOne.isHidden = true
+        hideAllScrollBar(true)
     }
     
     func configureShape() {
@@ -76,23 +71,27 @@ class SizeViewController: UIViewController {
     }
     
     func configureViewAfterSelect() {
-        verticalSlider.isHidden = false
-        verticalSliderOne.isHidden = false
-        horizontalSlider.isHidden = false
-        horizontalSliderOne.isHidden = false
-        heightSlider.isHidden = false
-        heightSliderOne.isHidden = false
+        hideAllScrollBar(false)
+        
         switch shapeSelect {
         case .circleToCircle:
             verticalSlider.isHidden = true
             verticalSliderOne.isHidden = true
         case .circleToSquare:
             verticalSliderOne.isHidden = true
-        case .squareToSquare:
-            print("do nothing")
+        case .squareToSquare: hideAllScrollBar(false)
         case .squareToCircle:
             verticalSlider.isHidden = true
         }
+    }
+    
+    func hideAllScrollBar(_ boolValue: Bool){
+        verticalSlider.isHidden = boolValue
+        verticalSliderOne.isHidden = boolValue
+        horizontalSlider.isHidden = boolValue
+        horizontalSliderOne.isHidden = boolValue
+        heightSlider.isHidden = boolValue
+        heightSliderOne.isHidden = boolValue
     }
     
     func valueChange() {
