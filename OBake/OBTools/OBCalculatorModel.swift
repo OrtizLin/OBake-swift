@@ -16,22 +16,6 @@ enum WeightType {
     case oz
 }
 
-enum SizeType: String, CaseIterable {
-    case none = "轉換尺寸"
-    case fourToSix = "4->6"
-    case fourToEight = "4->8"
-    case SixToEight = "6->8"
-    case SixToFour = "6->4"
-    case EightToSix = "8->6"
-    case EightToFour = "8->4"
-}
-
-enum ShapeType: String, CaseIterable {
-    case none = "轉換形狀"
-    case circleToRectangle = "圓->長條"
-    case rectangleToCircle = "長條->圓"
-}
-
 enum ShapeSelect: Int {
     case circleToCircle = 0
     case circleToSquare = 1

@@ -37,6 +37,7 @@ class SizeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavBackBotton()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "單位換算", style: .plain, target: self, action: #selector(calculate))
         configureSlider()
         configureShape()
     }
@@ -142,5 +143,16 @@ class SizeViewController: UIViewController {
         configureViewAfterSelect()
         valueChange()
         
+    }
+    
+    @objc func calculate() {
+         self.performSegue(withIdentifier: "calculateDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "calculateDetail" {
+            let viewController = segue.destination as! CalculateViewController
+            viewController.magnification = Double(WeightConvert.shared.magnificationChange(Int(horizontalSliderOne.value), y1: Int(verticalSliderOne.value), z1: Int(heightSliderOne.value), x2: Int(horizontalSlider.value), y2: Int(verticalSlider.value), z2: Int(heightSlider.value), type:shapeSelect))
+        }
     }
 }

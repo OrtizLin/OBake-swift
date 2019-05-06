@@ -316,9 +316,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2k0-A1-oj2">
-                                <rect key="frame" x="11" y="299" width="355" height="111"/>
-                            </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FkT-kZ-KTL">
                                 <rect key="frame" x="231" y="63" width="50" height="170"/>
                                 <subviews>
@@ -357,18 +354,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2k0-A1-oj2" firstAttribute="top" secondItem="FkT-kZ-KTL" secondAttribute="bottom" constant="18" id="4hD-Ok-koU"/>
                             <constraint firstItem="CxN-XU-ZA7" firstAttribute="top" secondItem="Xh9-QT-iTK" secondAttribute="bottom" constant="-270" id="4y4-YB-9xq"/>
-                            <constraint firstItem="2k0-A1-oj2" firstAttribute="leading" secondItem="gYm-5Y-Fdl" secondAttribute="leading" id="9wo-FN-Fqa"/>
                             <constraint firstItem="FkT-kZ-KTL" firstAttribute="leading" secondItem="pQI-15-FLJ" secondAttribute="trailing" constant="78.333333333333286" id="Da0-Zn-bf5"/>
-                            <constraint firstItem="2k0-A1-oj2" firstAttribute="centerX" secondItem="3ff-e3-vtl" secondAttribute="centerX" id="EZD-Ue-hSh"/>
                             <constraint firstItem="3IY-vs-y8g" firstAttribute="top" secondItem="Xh9-QT-iTK" secondAttribute="bottom" constant="-270" id="LMU-fW-ZG1"/>
-                            <constraint firstItem="3IY-vs-y8g" firstAttribute="top" secondItem="2k0-A1-oj2" secondAttribute="bottom" constant="20" id="Pjr-Y6-q4G"/>
+                            <constraint firstItem="FkT-kZ-KTL" firstAttribute="top" secondItem="pQI-15-FLJ" secondAttribute="top" id="RIU-wf-nB2"/>
                             <constraint firstItem="Xh9-QT-iTK" firstAttribute="leading" secondItem="gYm-5Y-Fdl" secondAttribute="trailing" constant="-50" id="Rqb-To-ZeO"/>
                             <constraint firstItem="Xh9-QT-iTK" firstAttribute="top" secondItem="gYm-5Y-Fdl" secondAttribute="bottom" constant="-210" id="WLy-Wo-Wkk"/>
                             <constraint firstItem="pQI-15-FLJ" firstAttribute="leading" secondItem="gYm-5Y-Fdl" secondAttribute="trailing" constant="10" id="Zgb-ge-TYB"/>
+                            <constraint firstItem="FkT-kZ-KTL" firstAttribute="leading" secondItem="zsx-Mk-wtM" secondAttribute="leading" constant="231" id="hAY-fL-Bgu"/>
                             <constraint firstItem="3ff-e3-vtl" firstAttribute="centerX" secondItem="zsx-Mk-wtM" secondAttribute="centerX" id="i84-Pq-w3f"/>
-                            <constraint firstItem="2k0-A1-oj2" firstAttribute="top" secondItem="pQI-15-FLJ" secondAttribute="bottom" constant="18" id="ruz-sH-ooN"/>
                             <constraint firstItem="3ff-e3-vtl" firstAttribute="top" secondItem="Xh9-QT-iTK" secondAttribute="bottom" constant="-270" id="tTS-q4-XJ2"/>
                             <constraint firstItem="3IY-vs-y8g" firstAttribute="leading" secondItem="3ff-e3-vtl" secondAttribute="trailing" constant="30" id="uuO-62-xX7"/>
                             <constraint firstItem="Xh9-QT-iTK" firstAttribute="top" secondItem="pQI-15-FLJ" secondAttribute="bottom" constant="-213" id="vSc-rP-ktb"/>
@@ -387,12 +381,11 @@
                         <outlet property="ozTransTextField" destination="nJc-zo-vcG" id="CBz-0s-lgK"/>
                         <outlet property="poundTextField" destination="eo6-iK-UgD" id="Uyu-pg-721"/>
                         <outlet property="poundTransTextField" destination="bbT-Hd-M4e" id="16m-YI-ajY"/>
-                        <outlet property="sizePicker" destination="2k0-A1-oj2" id="wgi-zV-MQ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SM-Ca-YMR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="99"/>
+            <point key="canvasLocation" x="2294" y="99"/>
         </scene>
         <!--Class View Controller-->
         <scene sceneID="Rx6-EK-uqd">
@@ -637,11 +630,12 @@
                         <outlet property="squareToSquare" destination="G9W-kC-skJ" id="lD3-AL-dzi"/>
                         <outlet property="verticalSlider" destination="Wfu-tu-Sq7" id="jZ3-GX-o3p"/>
                         <outlet property="verticalSliderOne" destination="xxC-iN-VcF" id="8K0-ho-sMD"/>
+                        <segue destination="WDi-AA-MUK" kind="show" identifier="calculateDetail" id="V9L-30-UC2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJL-fV-sVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333.5999999999999" y="1583.497536945813"/>
+            <point key="canvasLocation" x="1330" y="99"/>
         </scene>
         <!--Class Detail View Controller-->
         <scene sceneID="CZk-gC-hjY">
@@ -917,8 +911,8 @@
         <image name="8_green" width="128" height="128"/>
         <image name="9_blue" width="128" height="128"/>
         <image name="9_green" width="128" height="128"/>
-        <image name="back" width="50" height="50"/>
-        <image name="back_select" width="50" height="50"/>
-        <image name="dot" width="48" height="48"/>
+        <image name="back" width="37.5" height="37.5"/>
+        <image name="back_select" width="37.5" height="37.5"/>
+        <image name="dot" width="36" height="36"/>
     </resources>
 </document>

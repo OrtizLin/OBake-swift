@@ -18,7 +18,6 @@ class CalculateViewController: UIViewController {
     @IBOutlet weak var poundTextField: UITextField!
     @IBOutlet weak var ozTextField: UITextField!
     
-    @IBOutlet weak var sizePicker: UIPickerView!
     @IBOutlet weak var kgTransTextField: UITextField!
     @IBOutlet weak var gTransTextField: UITextField!
     @IBOutlet weak var cattyTransTextField: UITextField!
@@ -29,12 +28,12 @@ class CalculateViewController: UIViewController {
     var weightResult: (Weight)?
     var weightTransferResult: (Weight)?
     var nowValue: (String) = "empty"
-    var selectShape: (ShapeType) = .none
+    
+    var magnification: Double?
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        
-        setNavBackBotton()
+        navigationItem.title = "倍率：" + String(magnification ?? 1)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清除", style: .plain, target: self, action: #selector(clean))
 
         kgTextField.inputView = UIView()
@@ -48,8 +47,6 @@ class CalculateViewController: UIViewController {
         ozTextField.inputView = UIView()
         ozTextField.delegate = self
         
-        sizePicker.delegate = self
-        sizePicker.dataSource = self
         kgTransTextField.isUserInteractionEnabled = false
         gTransTextField.isUserInteractionEnabled = false
         cattyTransTextField.isUserInteractionEnabled = false
@@ -68,7 +65,6 @@ class CalculateViewController: UIViewController {
     }
     
     @IBAction func backTap(_ sender: Any) {
-        
         guard nowValue != "empty" else{return}
         
         if nowValue.count > 1 {
@@ -90,52 +86,10 @@ class CalculateViewController: UIViewController {
     }
     
 }
-extension CalculateViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
-    }
-
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if component == 0 {
-            return SizeType.allCases.count
-        }
-        else {
-            return ShapeType.allCases.count
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if component == 0 {
-            return SizeType.allCases[row].rawValue
-        }
-        else {
-            return ShapeType.allCases[row].rawValue
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
-        
-        guard nowValue != "empty" else{
-            hideTransTextField(true)
-            return
-        }
-        
-        guard sizePicker.selectedRow(inComponent: 0) != 0 || sizePicker.selectedRow(inComponent: 1) != 0 else {
-            hideTransTextField(true)
-            return
-        }
-        
-        weightTransferResult = WeightConvert.shared.sizeConvertValue(type: SizeType.allCases[sizePicker.selectedRow(inComponent: 0)], shape:ShapeType.allCases[sizePicker.selectedRow(inComponent: 1)] ,value: weightResult!)
-        updateValueOnTransTextField()
-    }
-}
-
 
 extension CalculateViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
         if textField == kgTextField {
            selectType = .kg
         }
@@ -157,7 +111,6 @@ extension CalculateViewController: UITextFieldDelegate {
     }
     
     func cleanTextField(){
-        
         kgTextField.text = ""
         gTextField.text = ""
         cattyTextField.text = ""
@@ -169,15 +122,22 @@ extension CalculateViewController: UITextFieldDelegate {
     }
     
     func showValueOnTextField(_ tag: Int){
-
         if tag == 100 && nowValue == "empty" || tag == 100 && nowValue . contains("."){
            return
         }
         
         nowValue = WeightConvert.shared.updateNowValue(tag, Value: nowValue)
-        weightResult = WeightConvert.shared.weightConvertValue(type: selectType, value: Double(nowValue) ?? 0)
-        weightTransferResult = WeightConvert.shared.sizeConvertValue(type:SizeType.allCases[sizePicker.selectedRow(inComponent: 0)], shape:ShapeType.allCases[sizePicker.selectedRow(inComponent: 1)], value: weightResult!)
         
+        weightResult = WeightConvert.shared.weightConvertValue(type: selectType, value: Double(nowValue) ?? 0)
+        
+        weightTransferResult = WeightConvert.shared.sizeConvertResult(magnification: magnification!, value: weightResult!)
+        
+        updateValueOnTextField()
+        updateValueOnTransTextField()
+        
+    }
+    
+    func updateValueOnTextField(){
         kgTextField.text = "\(weightResult?.kg ?? 0)"
         gTextField.text = "\(weightResult?.g ?? 0)"
         cattyTextField.text = "\(weightResult?.twCatty ?? 0)"
@@ -191,14 +151,9 @@ extension CalculateViewController: UITextFieldDelegate {
         case .twCatty: cattyTextField.text = nowValue
         case .oz: ozTextField.text = nowValue
         }
-        
-        guard sizePicker.selectedRow(inComponent: 0) != 0 else{return}
-        updateValueOnTransTextField()
-        
     }
     
     func updateValueOnTransTextField(){
-        
         kgTransTextField.text = "\(weightTransferResult?.kg ?? 0)"
         gTransTextField.text = "\(weightTransferResult?.g ?? 0)"
         cattyTransTextField.text = "\(weightTransferResult?.twCatty ?? 0)"

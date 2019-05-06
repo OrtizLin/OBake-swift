@@ -11,7 +11,7 @@ import UIKit
 
 protocol WeightConvertion {
     func weightConvertValue(type: WeightType , value: Double) -> Weight
-    func sizeConvertValue(type: SizeType, shape: ShapeType, value: Weight) -> Weight
+    func sizeConvertResult(magnification: Double, value: Weight) -> Weight
     func updateNowValue(_ tag: Int, Value: String) -> String
     func valueChange(_ x1:String, y1:String, z1:String, x2:String, y2:String, z2:String, type:ShapeSelect) -> String
     func updatePath(_ x:Int, y:Int, z:Int, circle: Bool) -> UIBezierPath
@@ -19,13 +19,13 @@ protocol WeightConvertion {
 }
 
 class WeightConvert: WeightConvertion {
-    
+   
     static let shared = WeightConvert()
     var firstString = ""
     var secondString = ""
     
     func weightConvertValue(type: WeightType, value: Double) -> Weight {
-        
+        // base on the unit user select, convert others.
         var basic: Double = 0
         
         switch type {
@@ -46,25 +46,8 @@ class WeightConvert: WeightConvertion {
         return weight
     }
     
-    func sizeConvertValue(type: SizeType, shape: ShapeType, value: Weight) -> Weight {
-        
-        var basic: Double = 0
-        
-        switch type {
-        case .none: basic = 1.0
-        case .fourToEight: basic = 2.8
-        case .fourToSix: basic = 1.8
-        case .SixToFour: basic = 0.6
-        case .SixToEight: basic = 1.78
-        case .EightToFour: basic = 0.4
-        case .EightToSix: basic = 0.56
-        }
-        switch shape {
-        case .none: basic = basic * 1.0
-        case .circleToRectangle: basic = basic * 2.0
-        case .rectangleToCircle: basic = basic * 0.5
-        }
-        let weight = Weight(kg: round(100*value.kg!*basic)/100, g: round(100*value.g!*basic)/100, twCatty: round(100*value.twCatty!*basic)/100, lb: round(100*value.lb!*basic)/100, oz: round(100*value.oz!*basic)/100)
+    func sizeConvertResult(magnification: Double, value: Weight) -> Weight {
+        let weight = Weight(kg: round(100*value.kg!*magnification)/100, g: round(100*value.g!*magnification)/100, twCatty: round(100*value.twCatty!*magnification)/100, lb: round(100*value.lb!*magnification)/100, oz: round(100*value.oz!*magnification)/100)
         
         return weight
     }
@@ -166,3 +149,8 @@ class WeightConvert: WeightConvertion {
     }
 
 }
+
+//updateNowValue tag
+// 0 = 0, 1 = 1, 2 = 2, ..... 9 = 9
+// 100 = .
+// 999 = back
