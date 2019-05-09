@@ -28,6 +28,10 @@ class SizeViewController: UIViewController {
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     
+    //shapeView
+    @IBOutlet weak var shapeViewOne: UIView!
+    @IBOutlet weak var shapeViewTwo: UIView!
+    
     var shapeSelect: ShapeSelect = .circleToCircle
     var topShape = CAShapeLayer()
     var bottomShape = CAShapeLayer()
@@ -60,14 +64,14 @@ class SizeViewController: UIViewController {
         topShape.fillColor = nil
         topShape.lineWidth = 1
         topShape.strokeColor = UIColor.init(red: 253/255, green: 103/255, blue: 43/255, alpha: 1).cgColor
-        topShape.position = CGPoint(x: view.center.x, y:  horizontalSliderOne.frame.origin.y - 40)
-        view.layer.addSublayer(topShape)
+        topShape.position = CGPoint(x: 120, y: 80)
+        shapeViewOne.layer.addSublayer(topShape)
         
         bottomShape.fillColor = nil
         bottomShape.lineWidth = 1
         bottomShape.strokeColor = UIColor.init(red: 21/255, green: 174/255, blue: 48/255, alpha: 1).cgColor
-        bottomShape.position = CGPoint(x: view.center.x, y: horizontalSlider.frame.origin.y - 40)
-        view.layer.addSublayer(bottomShape)
+        bottomShape.position = CGPoint(x: 120, y: 80)
+        shapeViewTwo.layer.addSublayer(bottomShape)
     }
     
     func configureViewAfterSelect() {

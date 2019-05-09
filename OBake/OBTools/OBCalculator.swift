@@ -122,13 +122,13 @@ class WeightConvert: WeightConvertion {
         }
         // draw circle
         else {
-            let path =  UIBezierPath(ovalIn: CGRect(x: -44-x, y: -64-z, width: 94+x, height: 74+x))
-            var point = CGPoint(x: -44-x, y: -22-z)
+            let path =  UIBezierPath(ovalIn: CGRect(x: -32-x, y: -20-z, width: 65+x, height: 60+x))
+            var point = CGPoint(x: -32-x, y: 15-z)
             path.move(to: point)
-            point = CGPoint(x: -42-x, y: 5+x)
+            point = CGPoint(x: -30-x, y: 45+x)
             path.addLine(to: point)
-            path.addCurve(to: CGPoint(x:48, y: 5+x), controlPoint1: CGPoint(x: -18-x, y: 40+x), controlPoint2: CGPoint(x: 27, y: 40+x))
-            point = CGPoint(x: 50, y: -22-z)
+            path.addCurve(to: CGPoint(x:31, y: 45+x), controlPoint1: CGPoint(x: -13-x, y: 65+x+x), controlPoint2: CGPoint(x: 12, y: 65+x+x))
+            point = CGPoint(x: 33, y: 15-z)
             path.addLine(to: point)
             
             return path
