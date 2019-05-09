@@ -83,7 +83,8 @@ class SizeViewController: UIViewController {
             verticalSliderOne.isHidden = true
         case .circleToSquare:
             verticalSliderOne.isHidden = true
-        case .squareToSquare: hideAllScrollBar(false)
+        case .squareToSquare:
+            hideAllScrollBar(false)
         case .squareToCircle:
             verticalSlider.isHidden = true
         }

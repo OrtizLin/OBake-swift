@@ -21,42 +21,44 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfm-O1-9Jd" customClass="FSPagerView" customModule="FSPagerView">
                                 <rect key="frame" x="16" y="32" width="343" height="227"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="AmU-3F-xx5"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-GE-cMh">
-                                <rect key="frame" x="18" y="731" width="46" height="22"/>
-                                <state key="normal" title="計算機"/>
-                                <connections>
-                                    <action selector="tempButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUo-Zy-gcC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qi0-b9-CbJ">
-                                <rect key="frame" x="134" y="620" width="90" height="30"/>
-                                <state key="normal" title="老師簡介"/>
-                                <connections>
-                                    <action selector="tempTwoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgs-7p-EHb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt7-bn-QGf">
-                                <rect key="frame" x="294" y="620" width="62" height="30"/>
-                                <state key="normal" title="甜點課程"/>
-                                <connections>
-                                    <action selector="tampThreeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SAJ-Bq-UxH"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="lvD-X4-uOU">
+                                <rect key="frame" x="69.5" y="615" width="236" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt7-bn-QGf">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="clock"/>
+                                        <connections>
+                                            <action selector="tampThreeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SAJ-Bq-UxH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qi0-b9-CbJ">
+                                        <rect key="frame" x="102" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="contact"/>
+                                        <connections>
+                                            <action selector="tempTwoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgs-7p-EHb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-GE-cMh">
+                                        <rect key="frame" x="204" y="0.0" width="32" height="32"/>
+                                        <state key="normal" image="calculator"/>
+                                        <connections>
+                                            <action selector="tempButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eUo-Zy-gcC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qi0-b9-CbJ" firstAttribute="leading" secondItem="fjc-GE-cMh" secondAttribute="trailing" constant="70" id="7wd-cs-Xbq"/>
-                            <constraint firstItem="jt7-bn-QGf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-47" id="C2G-Vl-6BQ"/>
-                            <constraint firstItem="Qi0-b9-CbJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-47" id="PR7-6K-zGK"/>
-                            <constraint firstItem="bfm-O1-9Jd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="S06-Cw-hmr"/>
-                            <constraint firstItem="jt7-bn-QGf" firstAttribute="leading" secondItem="Qi0-b9-CbJ" secondAttribute="trailing" constant="70" id="ZbW-sC-2J7"/>
-                            <constraint firstItem="jt7-bn-QGf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-81" id="bJQ-Xi-3U4"/>
-                            <constraint firstItem="fjc-GE-cMh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-47" id="bsB-mX-t8t"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="fjc-GE-cMh" secondAttribute="trailing" constant="-64" id="pW2-HV-EGt"/>
-                            <constraint firstItem="bfm-O1-9Jd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-188" id="vaE-KM-xbU"/>
+                            <constraint firstItem="lvD-X4-uOU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-52" id="Kbv-UJ-oAH"/>
+                            <constraint firstItem="bfm-O1-9Jd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="g9P-pi-Xh8"/>
                             <constraint firstItem="bfm-O1-9Jd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vel-wj-Rgm"/>
                             <constraint firstItem="bfm-O1-9Jd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y5j-Mf-BrJ"/>
+                            <constraint firstItem="lvD-X4-uOU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zJc-gr-oG2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -66,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="262" y="99"/>
+            <point key="canvasLocation" x="261.60000000000002" y="98.50074962518741"/>
         </scene>
         <!--Calculate View Controller-->
         <scene sceneID="VQQ-qb-7kZ">
@@ -931,6 +933,9 @@
         <image name="9_green" width="128" height="128"/>
         <image name="back" width="37.5" height="37.5"/>
         <image name="back_select" width="37.5" height="37.5"/>
+        <image name="calculator" width="32" height="32"/>
+        <image name="clock" width="32" height="32"/>
+        <image name="contact" width="32" height="32"/>
         <image name="dot" width="36" height="36"/>
     </resources>
 </document>

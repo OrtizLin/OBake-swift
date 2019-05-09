@@ -31,9 +31,9 @@ class NewsManager: UIViewController, NewsManageable  {
     }
     
     func getFakeDataArray() -> [News] {
-        let dataOne = News(title: "First News", imageUrl: "https://api.twdd.com.tw/upload/rotateimage/WMEaQTzPqrFmYSTJZ5YS1nLBZiC9xE64N87MtbeQ.png", url: "http://bit.ly/2EnmmsL")
-        let dataSecond = News(title: "Second News", imageUrl: "https://api.twdd.com.tw/upload/rotateimage/o5aqsXgmcu1lY6Pk8Ie8bAYTLaL596L0vgTz87xi.png", url: "http://bit.ly/2NmMg3K")
-        let dataThird = News(title: "Third News", imageUrl: "https://api.twdd.com.tw/upload/rotateimage/1gkeDt9ei4azXQR4nfmkxmgIyrkCQ64H3mtStjvU.jpeg", url: "https://news.twdd.tw/news/discount/229-20181107")
+        let dataOne = News(title: "布丁狗的好吃戚風蛋糕", imageUrl: "https://i.imgur.com/UYyw6Mu.jpg", url: "https://www.surveycake.com/s/JzWL5")
+        let dataSecond = News(title: "酷企鵝的香甜橙條", imageUrl: "https://i.imgur.com/BN2FJuY.jpg", url: "https://www.surveycake.com/s/JzWL5")
+        let dataThird = News(title: "美樂蒂的難吃巧克力", imageUrl: "https://i.imgur.com/kFgx9OT.jpg", url: "https://www.surveycake.com/s/JzWL5")
         
         var dataArray = [News]()
         dataArray.append(dataOne)
